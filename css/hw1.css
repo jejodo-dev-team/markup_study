@@ -1,4 +1,6 @@
-
+* {
+    box-sizing: border-box;
+}
 .profile {
     display: block;
     margin: 60px auto 0px auto;
@@ -27,6 +29,7 @@ hr {
     width: 700px;
     height: 180px;
     background-color: rgb(255, 255, 255);
+    padding: 16px 24px;
     margin: 12px auto ;
     /* border: 1px solid black; */
     border-radius: 10px;
@@ -41,7 +44,7 @@ hr {
 .user {
     height: 40px;
     /* background-color: blue; */
-    margin: 16px 20px;
+    /* margin: 16px 20px; */
 }
 .user img {
     width: 40px;
@@ -61,9 +64,9 @@ hr {
     color: rgb(124, 124, 124);
 }
 .content-text {
-    clear: both;
+    /* clear: both; */
     /* background-color: blueviolet; */
-    margin: 16px 20px;
+    margin: 16px 0px;
 }
 .content-text h3 {
     margin-top: 0px;
@@ -77,6 +80,8 @@ hr {
 
 .blog-img {
     width: 20%;
+    height: 100%;
+    display: flex;
     /* background-color: rgb(117, 117, 117); */
     float: left;
     vertical-align: middle;
