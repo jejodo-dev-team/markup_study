@@ -49,6 +49,13 @@ header p {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     background-color: #fff;
 }
+.homework:hover {
+    filter: brightness(90%);
+    transition-duration: 0.2s;
+}
+.homework:active{
+    transform: scale(0.98);
+}
 .profile img {
     float: left;
     width: 32px;
@@ -92,21 +99,11 @@ header p {
 }
 
 
-.main-btn {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    background-color: #fff;
-    color: #000;
-    font-weight: 700;
-    font-size: 16px;
-    border: 1px solid #000;
-    border-radius: 30px;
-    padding: 16px 20px 16px 20px;
-    cursor: pointer;
-}
-
-.main-btn:hover {
-    background-color: #000;
-    color: #fff;
+@media screen and (max-width: 768px){
+    .title h3{
+        height: 20px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
 }

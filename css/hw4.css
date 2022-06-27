@@ -2,6 +2,13 @@
     margin: 0px;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: 'font-name';
+    src: url();
+}
+body{
+    font-family: 'gulim', 'dotum';
+}
 .title {
     width: 100%;
     margin: auto;
@@ -149,25 +156,4 @@ td{
 }
 .pay-btn:hover a{
     color: #000;
-}
-
-
-
-/* 플로팅 버튼 */
-.main-btn {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    background-color: #fff;
-    color: #000;
-    font-weight: 700;
-    font-size: 16px;
-    border: 1px solid #000;
-    border-radius: 30px;
-    padding: 16px 20px 16px 20px;
-}
-
-.main-btn:hover {
-    background-color: #000;
-    color: #fff;
 }
