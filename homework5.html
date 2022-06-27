@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5번째 숙제</title>
+    <link href="css/all.css" rel="stylesheet">
+    <link href="css/hw5.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 이런 유용한 걸 배웠습니다.
+    div.container>div.text-box*4
+    mt20 -->
+
+    <div class="container">
+        <div class="text-box">
+            <h3>first title</h3>
+            <p>description text</p>
+        </div>
+        <div class="text-box">
+            <h3>second title</h3>
+            <p>description text</p>
+        </div>
+        <div class="text-box">
+            <h3>third title</h3>
+            <p>description text</p>
+        </div>
+        <div class="text-box">
+            <h3>fourth title</h3>
+            <p>description text</p>
+        </div>
+        <div style="float:none; clear: both;"></div>
+    </div>
+
+    <div class="section">
+        <div class="box">
+            <h3>first title</h3>
+            <p>description text</p>
+        </div>
+        <div class="box">
+            <h3>second title</h3>
+            <p>description text</p>
+        </div>
+        <div class="box">
+            <h3>third title</h3>
+            <p>description text</p>
+        </div>
+        <div class="box">
+            <h3>fourth title</h3>
+            <p>description text</p>
+        </div>
+    </div>
+
+
+    <hr class="memo-line">
+    <div class="memo-container">
+        <h5>숙제 후기</h5>
+        <h3>[#5] flex와 float 그리고 meaia를 활용한 반응형
+            <span class="memo-date">2022. 06. 27</span></h3>
+        <p class="memo-text">display:flex와 @media 를 배웠다.
+            요소 하나하나 설정해줘야하는 float와 귀찮은 inline-box와 비교하여
+            훨씬 가로배치하기 쉬운 flex를 배웠다. <br><br>
+            숙제는 4개의 텍스트 박스를 모바일, 태블릿, pc에서 보여지는 화면을 만들어 오는 것이었다. <br>
+            이전에는 반응형이라고 하여 박스의 width를 %단위로 설정하여 화면 viewport에 맞춰 박스가
+            줄어드는 것이었는데, 이번에는 @media screen and 를 활용해 viewport의 px값에 따라 
+            박스들이 보여지는 layout을 다르게 만드는 것을 배웠다. <br><br> 
+            용도에 따라 float가 유용할 때가 있고 flex가 유용할 때가 있는 것 같다. 
+            퍼블리싱을 잘 하려면 다양한 상황을 만들어 봐야할 것 같다. 다양한 데이터가 쌓이고 다양한 변수를 만나야 
+            어떤 layout에서는 어떤 display가 효율적인지 감이 생길 것 같다. 
+        </p>
+    </div>
+
+    <a href="index.html">
+        <button class="main-btn">H</button>
+    </a>
+
+</body>
+</html>
