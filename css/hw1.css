@@ -112,20 +112,3 @@ hr {
     width: 100%;
 }
 
-.main-btn {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    background-color: #fff;
-    color: #000;
-    font-weight: 700;
-    font-size: 16px;
-    border: 1px solid #000;
-    border-radius: 30px;
-    padding: 16px 20px 16px 20px;
-}
-
-.main-btn:hover {
-    background-color: #000;
-    color: #fff;
-}
