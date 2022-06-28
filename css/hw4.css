@@ -1,13 +1,7 @@
+@import "all.css";
 * {
     margin: 0px;
     box-sizing: border-box;
-}
-@font-face {
-    font-family: 'font-name';
-    src: url();
-}
-body{
-    font-family: 'gulim', 'dotum';
 }
 .title {
     width: 100%;
