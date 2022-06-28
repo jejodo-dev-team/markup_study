@@ -1,0 +1,153 @@
+@import "all.css";
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+.title {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.title img {
+    width: 100%;
+}
+.title p {
+    margin-top: 16px;
+    font-size: 16px;
+    letter-spacing: -5%;
+    line-height: 24px;
+    font-weight: 500;
+}
+.shop-btn {
+    margin-top: 24px;
+    padding: 6px 24px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.shop-btn a {
+    text-decoration: none;
+    color: #fff;
+}
+.shop-btn:hover {
+    background-color: #fff;
+    cursor: pointer;
+}
+.shop-btn:hover a{
+    color: #000;
+}
+
+
+
+
+.jejodo-cart {
+    margin: 56px auto 100px;
+    width: 90%;
+    max-width: 700px;
+}
+.jejodo-cart hr {
+    border: 0.7px solid #000;
+}
+
+
+.table-title {
+    color: #fff;
+    background-color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    width: 81px;
+    height: 28px;
+    padding: 7px 16px 2px 16px;
+    border-radius: 10px 10px 0px 0px;
+}
+.table-list {
+    width: 100%;
+}
+.list-item {
+    text-align: left;
+    padding-left: 16px;
+}
+table {
+    /* table 안에서 간격 없애기 */
+    border-collapse: collapse; 
+    margin: 16px auto 24px;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
+thead th{
+    padding: 8px;
+}
+tbody {
+    margin-bottom: 20px;
+}
+.table-img {
+    width: 20%;
+    height: 80%;
+}
+.table-img img {
+    width: 80%;
+    height: 50%;
+    object-fit: cover;
+    margin: 8px auto;
+    display: block;
+}
+.item-name {
+    padding: 16px;
+    text-align: left;
+}
+.item-name p{
+    font-size: 14px;
+    color: #999;
+    margin-top: 4px;
+}
+.total {
+    color: rgb(0, 123, 255);
+    font-weight: 700;
+    font-size: 18px;
+}
+td{
+    border-style: solid hidden solid;
+    border-color: rgb(176, 176, 176);
+    border-width: 0.7px;
+}
+.total-result {
+    padding: 20px 12px 20px 0px;
+    text-align: right;
+    color: rgb(0, 123, 255);
+    font-weight: 700;
+    font-size: 24px;
+    border-style: none;
+}
+
+.cart-link {
+    text-decoration: none;
+    color: dodgerblue;
+    font-size: 12px;
+    font-weight: 600;
+    vertical-align: middle;
+}
+.pay-btn {
+    padding: 6px 24px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    float: right;
+}
+.pay-btn a {
+    text-decoration: none;
+    color: #fff;
+}
+.pay-btn:hover {
+    background-color: #fff;
+    cursor: pointer;
+}
+.pay-btn:hover a{
+    color: #000;
+}

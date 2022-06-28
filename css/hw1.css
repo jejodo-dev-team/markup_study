@@ -1,3 +1,5 @@
+
+@import "all.css";
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -111,3 +113,4 @@ hr {
 .blog-img img {
     width: 100%;
 }
+
