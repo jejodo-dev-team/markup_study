@@ -1,7 +1,9 @@
+@import "all.css";
 * {
     margin: 0px;
     box-sizing: border-box;
 }
+
 body{
     background-color: #ffffff;
     background-image: url(../img/main/main-bg.png);
@@ -82,9 +84,13 @@ header p {
     height: 68px;
     line-height: 24px;
     color: #4d4d4d;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     margin-top: 8px;
     font-size: 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 }
 .thumbnail {
     width: 30%;
