@@ -40,8 +40,6 @@ header p {
     letter-spacing: -5%;
 }
 .homework {
-    color: #000;
-    text-decoration: none; 
     width: 90%;
     max-width: 700px;
     height: 180px;
@@ -50,6 +48,11 @@ header p {
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     background-color: #fff;
+    cursor: pointer;
+}
+.homework a{
+    text-decoration: none;
+    color: black;
 }
 .homework:hover {
     filter: brightness(90%);

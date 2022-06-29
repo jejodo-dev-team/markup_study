@@ -36,6 +36,7 @@ header p>span {
     overflow-y: hidden;
     height: 100%;
     border-radius: 10px;
+    cursor: pointer;
 }
 .overlay {
     position: absolute;
@@ -45,7 +46,6 @@ header p>span {
     background-color: #000;
     opacity: 0;
     transition: all 0.3s;
-    cursor: pointer;
     color: #fff;
     padding: 8px 24px;
 }
@@ -54,7 +54,7 @@ header p>span {
     height: 100%;
     object-fit: cover;
 }
-.shop-item:hover .overlay {
+.item-box:hover .overlay {
     opacity: 0.7;
     bottom: 0px;
 }
