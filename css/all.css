@@ -1,0 +1,62 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* memo bod */
+.memo-container {
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 700px;
+    padding: 20px 32px 40px 32px;
+    margin: 32px auto 100px;
+    border-radius: 10px;
+}
+.memo-container h5 {
+    color: #4498F2;
+    margin-bottom: 8px;
+}
+.memo-date {
+    font-size: 12px;
+    color: #999;
+    margin-left: 8px;
+    font-weight: 400;
+}
+.memo-text {
+    margin-top: 16px;
+    line-height: 24px;
+}
+.memo-line {
+    width: 90%;
+    max-width: 700px;
+    margin: 60px auto 0px;
+    opacity: 50%;
+}
+
+
+/* main floating btn */
+.main-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #fff;
+    color: #000;
+    font-weight: 700;
+    font-size: 16px;
+    border: 1px solid #000;
+    border-radius: 30px;
+    padding: 16px 20px 16px 20px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.main-btn:hover {
+    background-color: #000;
+    color: #fff;
+    transform: rotate(180deg);
+}
+.main-btn:active {
+    transform: scale(0.7);
+}

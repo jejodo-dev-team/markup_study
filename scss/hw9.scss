@@ -1,0 +1,98 @@
+@import '_all.scss';
+
+//mixin
+@mixin alert($backcolor) {
+    margin: 12px auto;
+    padding: 16px 24px;
+    border-radius: 5px;  
+    background-color: $backcolor;  
+}
+@mixin colbox($width) {
+    background-color: #eee;
+    border: 1px solid #999;
+    padding: 16px 12px;
+    border-radius: 5px;
+    width: $width;
+}
+
+// 변수 선언
+$green: #e1efda;
+$blue: #ddecf6;
+$yellow: #fbf8e5;
+$shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+//임시 class 
+%divbox {
+    width: 90%;
+    max-width: 700px;
+    margin: auto;
+}
+//scss
+header {
+    text-align: center;
+    margin: 60px auto;
+    h4 {
+        margin-top: 12px;
+    }    
+}    
+
+.list{
+    @extend %divbox;
+    padding: 0px;
+    
+    li {
+        background-color: #fff;
+        list-style: none;
+        padding: 16px 24px;
+        border: 0.7px solid #999;
+        cursor: pointer;
+    }
+    li:active {
+        background-color: #0f81f2;
+        color: #fff;
+    }
+}
+
+.alert-box {
+    @extend %divbox;
+    margin-top: 40px;
+    
+    .alert-green {
+        @include alert($green);
+        box-shadow: $shadow;
+        color: #49755a;
+    }
+    .alert-blue {
+        @include alert($blue);
+        box-shadow: $shadow;
+        color: #416f95;
+    }
+    .alert-yellow {
+        @include alert($yellow);
+        box-shadow: $shadow;
+        color: #856d42;
+    }
+    span {
+        font-weight: 700;
+    }
+}
+
+.row-box {
+    @extend %divbox;
+    margin-top: 40px;
+        .row {
+            width: 100%;
+            display: flex;
+            margin-top: 24px;
+            gap: 12px;
+        }
+        .col-6 {
+            @include colbox(50%);
+        }
+        .col-4 {
+            @include colbox(33.33%);
+        }
+        .col-3 {
+            @include colbox(25%);
+        }
+}

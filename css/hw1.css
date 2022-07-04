@@ -1,0 +1,116 @@
+
+@import "all.css";
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+.navbar {
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.055);
+}
+.navbar-top {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 12px;
+
+}
+.navbar-bottom{
+    text-align: center;
+    padding: 0px;
+}
+.navbar-bottom li {
+    display: inline-block;
+    /* background-color: #eee; */
+    padding: 12px;
+    /* text-align: center; */
+}
+.navbar-bottom li:hover {
+    background-color: #eee;
+}
+.navbar-bottom a {
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #000;
+}
+.profile {
+    display: block;
+    margin: 60px auto 0px;
+    width: 80px;
+}
+.title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 16px;
+}
+.title-area p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 32px;
+}
+
+hr {
+    width: 700px;
+    margin: auto;
+}
+
+
+.container{
+    width: 700px;
+    height: 180px;
+    background-color: rgb(255, 255, 255);
+    padding: 16px 24px;
+    margin: 12px auto ;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.blog-contents {
+    width: 80%;
+    float: left;
+}
+
+.user {
+    height: 40px;
+}
+.user img {
+    width: 40px;
+    float: left;
+}
+.user-name {
+    float: left;
+    margin-left: 12px;
+}
+.user-name h4 {
+    margin-top: 4px;
+    margin-bottom: 0px;
+}
+.user-name p {
+    margin: 4px 0px;
+    font-size: 12px;
+    color: rgb(124, 124, 124);
+}
+.content-text {
+    /* clear: both; */
+    margin: 16px 0px;
+}
+.content-text h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.content-text p {
+    margin-top: 8px;
+}
+
+
+.blog-img {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    float: left;
+    align-items: center;
+}
+.blog-img img {
+    width: 100%;
+}
+

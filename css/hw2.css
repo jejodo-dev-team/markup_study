@@ -1,0 +1,125 @@
+@import "all.css";
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    outline : none;
+}
+
+.profile {
+    width: 90%;
+    max-width: 700px;
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+.profile img {
+    width: 360px;
+    margin-top: 60px;
+}
+.profile h1 {
+    margin-top: 32px;
+}
+.profile p {
+    margin-top: 16px;
+    font-weight: 500;
+}
+.btn {
+    margin-top: 16px;
+    padding: 8px 24px;
+    border: 1px solid #000;
+    border-radius: 25px;
+    background-color: #fff;
+}
+.btn a{
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+}
+.btn:hover {
+    background-color: #000;
+    text-decoration: none;
+    color: #fff;
+}
+.btn:hover a {
+    color: #fff
+   }
+.profile hr {
+    margin-top: 36px;
+}
+.floating-btn {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.floating-btn img {
+    width: 60px;
+}
+
+
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    height: 240px;
+    background-color: rgb(173, 132, 102);
+    padding: 16px 20px;
+    margin: 16px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+    background-image: url(../img/hw2/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.description {
+    width: 70%;
+    float: left;
+    padding-top: 8px;
+    padding-right: 16px;
+}
+.description p{
+    margin-top: 16px;
+    font-weight: 600;
+    max-height: 96px;
+    overflow-y: hidden;
+
+}
+.subbtn {
+    float: left;
+    margin-right: 8px;
+}
+
+
+.sogae-img {
+    width: 30%;
+    height: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+.sogae-img img {
+    width: 100%;
+}
+
+.container1 {
+    width: 90%;
+    max-width: 700px;
+    height: 240px;
+    background-color: rgb(173, 132, 102);
+    padding: 16px 20px;
+    margin: 16px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #968777;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
