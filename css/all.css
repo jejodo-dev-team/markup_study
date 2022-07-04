@@ -1,3 +1,8 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
 /* memo bod */
 .memo-container {
     box-sizing: border-box;
