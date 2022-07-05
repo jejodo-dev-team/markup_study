@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숙제 10</title>
+    <link href="scss/hw10.css" rel="stylesheet">
+    <link rel="icon" href="img/main/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="menu-title">Menu</div>
+        <div class="menu-item">Item</div>
+    </div>
+
+    <div class="main-title">
+        <h1>🧨 Transform & animation 🚨</h1>
+        <h4>마우스를 올려보세요~</h4>
+    </div>
+    <div class="scroll-sign">
+        <h4>scoll</h5>
+        <p>⬇️</p>
+    </div>
+    <hr class="memo-line">
+
+    <h2 class="ani-text">Hi~</h2>
+    <hr class="memo-line">
+
+    <button class="shaking-btn">흔들흔들흔들리는버튼</button>
+    <hr class="memo-line">
+
+    <div class="close-btn">
+        <svg>
+            <rect y="12px" width="28px" height="4px" class="vertical-line"/>
+            <rect x="12px" width="4px" height="28px" class="horizontal-line"/>
+        </svg>
+    </div>
+    <hr class="memo-line">
+
+
+    <!-- 이건 숙제는 아니고 그냥 배운거 기록해둔거에요~ -->
+    <video class="jejodo-video" controls autoplay muted loop preload="metadata">
+        <source src="img/hw10/jejodo.mp4" type="video/mp4">
+    </video>
+
+    <hr class="memo-line">
+    <div class="memo-container">
+        <h5>숙제 후기</h5>
+        <h3>[#10] 재밌는 에니메이션 시간~
+            <span class="memo-date">2022. 07. 05</span></h3>
+        <p class="memo-text">선생님이 애니메이션을 줄 땐 좋은 말 할 때 transform을 사용하라고 하셨다. 
+            그 이유는 웹이 그리는 순서 때문이었는데, 웹은 1. Render Tree 2. layout 3. paint 4. Composite 순서로 생겨나는데, 
+            2번에 해당하는 margin으로 animation을 주면 2,3,4를 다시 그려야 해서 웹이 많이 버벅댈 수 있으니 
+            4에 해당하는 transform을 사용하여 애니메이션을 주는 게 좋다고 했다. 좋은 말 할 때 들었더니 버벅대지 않는 애니메이션을 만들었다. 
+        </p>
+    </div>
+
+    <a href="index.html">
+        <button class="main-btn">H</button>
+    </a> 
+</body>
+</html>
