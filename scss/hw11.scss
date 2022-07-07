@@ -1,0 +1,67 @@
+@import '_all.scss';
+
+body {
+    background-image: url(../img/hw11/grid.png);
+    background-attachment: fixed;
+    background-size: cover;
+}
+.grid-container {
+    display: grid;
+    margin: 60px auto;
+    justify-content: center;
+    grid-template-columns: 100px 100px 100px 100px ;
+    grid-template-rows: 100px 100px 100px;
+    grid-gap: 10px;
+    grid-template-areas: 
+        "header header header header"
+        "sidebar content content content"
+        "sidebar content content content";
+    div {
+        background-color: rgb(235, 236, 170);
+        cursor: pointer;
+    }
+    .grid-nav {
+        grid-area: header;
+    }
+    .grid-sidebar {
+        grid-area: sidebar;
+    }
+    .grid-content {
+        grid-area: content;
+    }
+    // .grid-nav {grid-column: 1/5;}
+    // .grid-sidebar {grid-row: 2 / 4;}
+}
+
+.grid-container2 {
+    display: grid;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr ;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    div {
+        transition: transform 0.1s linear;
+        cursor: pointer;
+    }
+    div:hover {
+        transform: scale(0.95);
+    }
+    .grid2-main-img {
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+}   
+@media screen and (max-width: 768px){
+    .grid-container2 {
+        grid-template-columns: 1fr ;
+        .grid2-main-img {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+    }
+} 

@@ -49,22 +49,6 @@ $shadow: 4px 0px 10px rgba(0,0,0,0.1);
     }
 }
 
-
-// title
-.main-title {
-    text-align: center;
-    padding-top: 80px;
-    
-    h4 {
-        margin-top: 20px;
-        @include animation (title-description, 1.2s);
-    }
-    @keyframes title-description {
-        0% {transform: translateX(4000px)}
-        80% {transform: translateX(-10px) skew(-20deg)}
-        100% {transform: translateX(0px)}
-    }
-}
 .scroll-sign {
     text-align: center;
     margin: 80px auto 0px;
@@ -148,8 +132,4 @@ $shadow: 4px 0px 10px rgba(0,0,0,0.1);
     display: block;
 
     source {width: 100%;}
-}
-.memo-text ol {
-        padding-left: 0px;
-        text-align: left;
 }

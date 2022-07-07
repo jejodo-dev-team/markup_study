@@ -2,6 +2,27 @@
     margin: 0px;
     box-sizing: border-box;
 }
+@mixin hw-main-title-animation ($name, $second){
+    animation-name: $name;
+    animation-duration: $second;
+}
+
+
+// 숙제 메인타이틀
+.homework-main-title {
+    text-align: center;
+    padding-top: 80px;
+    
+    h4 {
+        margin-top: 20px;
+        @include hw-main-title-animation (title-description, 1.2s);
+    }
+    @keyframes title-description {
+        0% {transform: translateX(4000px)}
+        80% {transform: translateX(-10px) skew(-20deg)}
+        100% {transform: translateX(0px)}
+    }
+}
 
 // memo bod 
 .memo-container {
@@ -49,7 +70,7 @@
     border-radius: 30px;
     padding: 16px 20px 16px 20px;
     cursor: pointer;
-    transition: all 0.3s linear;
+    transition: transform 0.3s linear;
 }
 
 .main-btn:hover {
