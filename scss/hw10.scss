@@ -1,0 +1,155 @@
+@import '_all.scss';
+
+$shadow: 4px 0px 10px rgba(0,0,0,0.1);
+
+@mixin transform ($px) {
+    transform: translateX($px);
+    transition: transform 0.3s linear; 
+}
+@mixin animation ($name, $second){
+    animation-name: $name;
+    animation-duration: $second;
+}
+
+//sidebar 
+.sidebar {
+    height: 100vh;
+    width: 300px;
+    color: #fff;
+    background-color: #000;
+    position: absolute;
+    position: fixed;
+    z-index: 10000;
+    box-shadow: $shadow;
+    @include transform(-180px);
+    cursor: pointer;
+    .menu-title {
+        padding: 32px;
+        font-size: 28px;
+        font-weight: 500;
+        @include transform(180px); 
+    }
+    .menu-item {
+        padding: 24px;
+        @include transform(110px);
+    }
+}
+.sidebar:hover {
+    transform: translateX(0px);
+    .menu-title {
+        transform: translateX(80px);
+    }
+    .menu-item {
+        @include animation (speedtext, 1s);
+    }
+    @keyframes speedtext {
+        0% {transform: translateX(110px)}
+        50% {transform: translateX(180px) skew(-20deg)}
+        100% {transform: translateX(110px)}
+    }
+}
+
+
+// title
+.main-title {
+    text-align: center;
+    padding-top: 80px;
+    
+    h4 {
+        margin-top: 20px;
+        @include animation (title-description, 1.2s);
+    }
+    @keyframes title-description {
+        0% {transform: translateX(4000px)}
+        80% {transform: translateX(-10px) skew(-20deg)}
+        100% {transform: translateX(0px)}
+    }
+}
+.scroll-sign {
+    text-align: center;
+    margin: 80px auto 0px;
+    h4 {
+        @include animation (scroll, 1.2s);
+        animation-iteration-count: infinite;
+    }
+    p {margin-top: 16px;}
+}
+
+@keyframes scroll {
+    0% {transform: translateY(0px)}
+    60% {transform: translateY(8px)}
+    100% {transform: translateY(0px)}
+}
+
+// 좌우로 움직이는 텍스트
+.ani-text {
+    text-align: center;
+    margin: 40px auto;
+}
+
+.ani-text:hover {
+    @include animation (왔다갔다, 1s);
+}
+
+@keyframes 왔다갔다 {
+    0% {transform: translateX(0px)}
+    50% {transform: translateX(-100px)}
+    100% {transform: translateX(100px)}
+}
+
+// 흔들흔들흔들리는버튼
+.shaking-btn {
+    background-color: rgb(255, 217, 0);
+    padding: 12px 32px;
+    border: 1px solid  rgb(255, 217, 0) ;
+    border-radius: 20px;
+    margin: 20px auto;    
+    display: block;
+    font-weight: 500;
+    cursor: pointer;
+}
+.shaking-btn:hover {
+    @include animation (shaking, 0.6s);
+    animation-iteration-count: infinite;
+}
+@keyframes shaking {
+    0% {transform: rotate(10deg);}
+    25%{transform: rotate(-10deg)}
+    50% {transform: rotate(10deg)}
+    100% {transform: rotate(0deg)}
+}
+
+.close-btn {
+    margin: 40px auto;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    svg {
+        width: 32px;
+        height: 32px;
+    }
+    svg:hover {
+        @include animation (close-btn-motion, 1s);
+        animation-fill-mode: forwards;
+    }
+}
+@keyframes close-btn-motion {
+    0% {transform: rotate(0deg)}
+    50% {transform: rotate(-30deg)}
+    100% {transform: rotate(50deg) scale(1.5)}
+}
+
+
+// 그냥 첨부해본 비디오
+.jejodo-video {
+    width: 90%;
+    max-width: 700px;
+    margin: auto;
+    display: block;
+
+    source {width: 100%;}
+}
+.memo-text ol {
+        padding-left: 0px;
+        text-align: left;
+}
