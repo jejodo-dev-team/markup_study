@@ -5,6 +5,49 @@
           box-sizing: border-box;
 }
 
+.homework-main-title {
+  text-align: center;
+  padding-top: 80px;
+}
+
+.homework-main-title h4 {
+  margin-top: 20px;
+  -webkit-animation-name: title-description;
+          animation-name: title-description;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+}
+
+@-webkit-keyframes title-description {
+  0% {
+    -webkit-transform: translateX(4000px);
+            transform: translateX(4000px);
+  }
+  80% {
+    -webkit-transform: translateX(-10px) skew(-20deg);
+            transform: translateX(-10px) skew(-20deg);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes title-description {
+  0% {
+    -webkit-transform: translateX(4000px);
+            transform: translateX(4000px);
+  }
+  80% {
+    -webkit-transform: translateX(-10px) skew(-20deg);
+            transform: translateX(-10px) skew(-20deg);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
 .memo-container {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -54,8 +97,10 @@
   border-radius: 30px;
   padding: 16px 20px 16px 20px;
   cursor: pointer;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
 }
 
 .main-btn:hover {
@@ -155,49 +200,6 @@
   100% {
     -webkit-transform: translateX(110px);
             transform: translateX(110px);
-  }
-}
-
-.main-title {
-  text-align: center;
-  padding-top: 80px;
-}
-
-.main-title h4 {
-  margin-top: 20px;
-  -webkit-animation-name: title-description;
-          animation-name: title-description;
-  -webkit-animation-duration: 1.2s;
-          animation-duration: 1.2s;
-}
-
-@-webkit-keyframes title-description {
-  0% {
-    -webkit-transform: translateX(4000px);
-            transform: translateX(4000px);
-  }
-  80% {
-    -webkit-transform: translateX(-10px) skew(-20deg);
-            transform: translateX(-10px) skew(-20deg);
-  }
-  100% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-}
-
-@keyframes title-description {
-  0% {
-    -webkit-transform: translateX(4000px);
-            transform: translateX(4000px);
-  }
-  80% {
-    -webkit-transform: translateX(-10px) skew(-20deg);
-            transform: translateX(-10px) skew(-20deg);
-  }
-  100% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
   }
 }
 
@@ -409,10 +411,5 @@
 
 .jejodo-video source {
   width: 100%;
-}
-
-.memo-text ol {
-  padding-left: 0px;
-  text-align: left;
 }
 /*# sourceMappingURL=hw10.css.map */
