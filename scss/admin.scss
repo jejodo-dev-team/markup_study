@@ -1,0 +1,213 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+$shadowX: 4px 0px 10px rgba(0,0,0,0.1);
+$shadowY: 0px 4px 10px rgba(0,0,0,0.1);
+$white: #fff;
+
+@mixin card-white-background () {
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: $shadowX;
+}
+body {
+    cursor: url('../img/main/favicon.png') 20 30, auto;
+}
+
+//헤더
+header {
+    width: 100%;
+    height: 60px;
+    background-color: $white;
+    box-shadow: $shadowY;
+    position: fixed;
+    display: flex;
+    z-index: 90;
+}
+.logo {
+    width: 130px;
+    height: 40px;
+    margin: 10px 20px;
+    a{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #000;
+    }
+    img {
+        width: 20%;
+    }
+    h1 {
+        width: 80%;
+        font-size: 16px;
+        margin-left: 4px;
+    }
+}
+.search-box {
+    margin-top: 14px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 0.7px solid #999;
+}
+
+//어드민 바디 부분 레이아웃
+.admin-default-layout {display: flex;}
+//사이드바에 들어가는 아이콘
+.admin-sidebar{
+    width: 60px;
+    height: 100vh;
+    position: fixed;
+    box-shadow: $shadowX;
+    background-color: $white;
+}
+.icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    img {
+        width: 32px;
+        opacity: 20%;
+    }
+    .icon-activebar {
+        width: 6px;
+        height: 100%;
+        position: absolute;
+        background-color: #000;
+        transform: translateX(-36px);
+        transition: transform 0.2s;
+    }
+}
+.active-icon {
+    margin-top: 60px;
+    img {opacity: 100%;}
+    .icon-activebar {
+        width: 6px;
+        height: 100%;
+        position: absolute;
+        background-color: #000;
+        transform: translateX(-27px);
+    }
+}
+.icon:hover {
+    background-color: #eee;
+    img { opacity: 100%;}
+    .icon-activebar {transform: translateX(-27px);}
+}
+
+//어드민 메인 콘텐츠 
+.admin-content {
+    margin-left: 60px;
+    width: 100%;
+    margin-bottom: 100px;
+}
+.admin-main-title{
+    margin: 80px 16px 0px 40px;
+    font-size: 24px;
+    font-weight: 500;
+}
+@media screen and (max-width: 768px){
+    .admin-main-title {
+        margin: 80px 16px 0px 20px;
+    }
+}
+
+//수치 나타내는 카드들
+.admin-cards {
+    max-width: 1400px;
+    margin: 20px 40px;
+    display: flex;
+    gap: 20px;
+    .earningsMonthly {border-left: 4px solid skyblue;}
+    .earningsAnnual {border-left: 4px solid rgb(146, 243, 19);}
+    .task-card {border-left: 4px solid rgb(116, 63, 240);}
+    .requests {border-left: 4px solid rgb(245, 193, 25);}
+}
+.card {
+    width: 25%;
+    padding: 24px 16px 24px 20px;
+    @include card-white-background();
+    display: flex;
+}
+.card-text {
+    width: 70%;
+    h2{
+        font-size: 14px;
+        font-weight: 400;
+    }
+    h3 {
+        margin-top: 12px;
+        font-size: 20px;
+    }
+}
+.card-icon {
+    width: 30%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    img {
+        width: 36px;
+
+    }
+}
+//카드들 반응형 화면
+@media screen and (max-width: 768px){
+    .admin-cards {
+        flex-direction: column;
+        margin: 20px 20px;
+    }
+    .card {
+        width: 100%;
+    }
+}
+//차트와 테스크 카드 화면 
+.admin-chart-tasks {
+    max-width: 1400px;
+    margin: 20px 40px;
+    display: flex;
+    gap: 20px;
+}
+//차트
+.chart-box {
+    width: 60%;
+    @include card-white-background();
+}
+.chart-title {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 24px 24px 16px;
+    border-bottom: 0.7px solid #999;
+}
+#myChart {
+    padding: 24px;
+}
+//테스크 카드
+.tasks-list {
+    width: 40%;
+    height: 100%;
+    @include card-white-background();
+    .tasks {
+        padding: 20px 24px;
+        border-bottom: 0.7px solid #999;
+    }
+}
+//차트와 테스크 카드 반응형
+@media screen and (max-width: 768px){
+    .admin-chart-tasks {
+        margin: 20px 20px;
+        flex-direction: column;
+    }
+    .chart-box {
+        width: 100%;
+    }
+    .tasks-list {
+        width: 100%;
+    }
+}

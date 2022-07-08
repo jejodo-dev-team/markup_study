@@ -1,0 +1,297 @@
+* {
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  cursor: url("../img/main/favicon.png") 20 30, auto;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 90;
+}
+
+.logo {
+  width: 130px;
+  height: 40px;
+  margin: 10px 20px;
+}
+
+.logo a {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  color: #000;
+}
+
+.logo img {
+  width: 20%;
+}
+
+.logo h1 {
+  width: 80%;
+  font-size: 16px;
+  margin-left: 4px;
+}
+
+.search-box {
+  margin-top: 14px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 0.7px solid #999;
+}
+
+.admin-default-layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.admin-sidebar {
+  width: 60px;
+  height: 100vh;
+  position: fixed;
+  -webkit-box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.icon img {
+  width: 32px;
+  opacity: 20%;
+}
+
+.icon .icon-activebar {
+  width: 6px;
+  height: 100%;
+  position: absolute;
+  background-color: #000;
+  -webkit-transform: translateX(-36px);
+          transform: translateX(-36px);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.active-icon {
+  margin-top: 60px;
+}
+
+.active-icon img {
+  opacity: 100%;
+}
+
+.active-icon .icon-activebar {
+  width: 6px;
+  height: 100%;
+  position: absolute;
+  background-color: #000;
+  -webkit-transform: translateX(-27px);
+          transform: translateX(-27px);
+}
+
+.icon:hover {
+  background-color: #eee;
+}
+
+.icon:hover img {
+  opacity: 100%;
+}
+
+.icon:hover .icon-activebar {
+  -webkit-transform: translateX(-27px);
+          transform: translateX(-27px);
+}
+
+.admin-content {
+  margin-left: 60px;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.admin-main-title {
+  margin: 80px 16px 0px 40px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .admin-main-title {
+    margin: 80px 16px 0px 20px;
+  }
+}
+
+.admin-cards {
+  max-width: 1400px;
+  margin: 20px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.admin-cards .earningsMonthly {
+  border-left: 4px solid skyblue;
+}
+
+.admin-cards .earningsAnnual {
+  border-left: 4px solid #92f313;
+}
+
+.admin-cards .task-card {
+  border-left: 4px solid #743ff0;
+}
+
+.admin-cards .requests {
+  border-left: 4px solid #f5c119;
+}
+
+.card {
+  width: 25%;
+  padding: 24px 16px 24px 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  -webkit-box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card-text {
+  width: 70%;
+}
+
+.card-text h2 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.card-text h3 {
+  margin-top: 12px;
+  font-size: 20px;
+}
+
+.card-icon {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-icon img {
+  width: 36px;
+}
+
+@media screen and (max-width: 768px) {
+  .admin-cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 20px 20px;
+  }
+  .card {
+    width: 100%;
+  }
+}
+
+.admin-chart-tasks {
+  max-width: 1400px;
+  margin: 20px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.chart-box {
+  width: 60%;
+  border-radius: 5px;
+  background-color: #fff;
+  -webkit-box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chart-title {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 24px 24px 16px;
+  border-bottom: 0.7px solid #999;
+}
+
+#myChart {
+  padding: 24px;
+}
+
+.tasks-list {
+  width: 40%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #fff;
+  -webkit-box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tasks-list .tasks {
+  padding: 20px 24px;
+  border-bottom: 0.7px solid #999;
+}
+
+@media screen and (max-width: 768px) {
+  .admin-chart-tasks {
+    margin: 20px 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .chart-box {
+    width: 100%;
+  }
+  .tasks-list {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=admin.css.map */

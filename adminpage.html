@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adminpage</title>
+    <link href="scss/admin.css" rel="stylesheet">
+    <link rel="icon" href="img/main/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/main/favicon.png" alt="">
+                <h1>차차숙제모음집</h1>
+            </a>
+        </div>
+        <div class="search">
+            <input type="search" class="search-box" placeholder="search">
+        </div>
+        <div class="header-icon-box"></div>
+    </header>
+    
+    <div class="admin-default-layout">
+        <div class="admin-sidebar">
+            <div class="icon active-icon">
+                <div class="icon-activebar"></div>
+                <img src="img/admin/icon_home.svg" alt="">
+            </div>
+            <div class="icon">
+                <div class="icon-activebar"></div>
+                <img src="img/admin/icon_sunny.svg" alt="">
+            </div>
+            <div class="icon">
+                <div class="icon-activebar"></div>
+                <img src="img/admin/icon_cloudy.svg" alt="">
+            </div>
+            <div class="icon">
+                <div class="icon-activebar"></div>
+                <img src="img/admin/icon_snowing.svg" alt="">
+            </div>
+            <div class="icon">
+                <div class="icon-activebar"></div>
+                <img src="img/admin/icon_rocket.svg" alt="">
+            </div>
+
+        </div>
+
+        <div class="admin-content">
+            <div class="admin-main-title">Dashboard</div>
+            <div class="admin-cards">
+                <div class="earningsMonthly card">
+                    <div class="card-text">
+                        <h2>Earnings(Monthly)</h2>
+                        <h3>$400,000</h3>
+                    </div>
+                    <div class="card-icon">
+                        <img src="img/admin/icon_calendar.svg" alt="">
+                    </div>
+                </div>
+                <div class="earningsAnnual card">
+                    <div class="card-text">
+                        <h2>Earnings(Annual)</h2>
+                        <h3>$800,000</h3>
+                    </div>
+                    <div class="card-icon">
+                        <img src="img/admin/icon_money.svg" alt="">
+                    </div>
+                </div>
+                <div class="task-card card">
+                    <div class="card-text">
+                        <h2>Tasks</h2>
+                        <h3>13</h3>
+                    </div>
+                    <div class="card-icon">
+                        <img src="img/admin/icon_gragh.svg" alt="">
+                    </div>
+                </div>
+                <div class="requests card">
+                    <div class="card-text">
+                        <h2>Requests</h2>
+                        <h3>26</h3>
+                    </div>
+                    <div class="card-icon">
+                        <img src="img/admin/icon_settings.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="admin-chart-tasks">
+                <div class="chart-box">
+                    <div class="chart-title">Earnings Overview</div>
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="tasks-list">
+                    <div class="chart-title">Tasks</div>
+                    <div class="tasks">어드민 페이지 제작하기</div>
+                    <div class="tasks">화섬 디자인하기</div>
+                    <div class="tasks">개발 숙제하기</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: 'hi',
+                    data: [12, 19, 3, 5, 21, 28],
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        </script>
+</body>
+</html>
