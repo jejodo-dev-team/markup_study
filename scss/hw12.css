@@ -2,6 +2,7 @@
   margin: 0px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  cursor: url("../img/main/favicon.png") 20 30, auto;
 }
 
 .homework-main-title {

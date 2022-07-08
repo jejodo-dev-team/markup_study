@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     box-sizing: border-box;
+    cursor: url('../img/main/favicon.png') 20 30, auto;
 }
 @mixin hw-main-title-animation ($name, $second){
     animation-name: $name;

@@ -12,7 +12,9 @@ $white: #fff;
     background-color: #fff;
     box-shadow: $shadowX;
 }
-
+body {
+    cursor: url('../img/main/favicon.png') 20 30, auto;
+}
 
 //헤더
 header {
