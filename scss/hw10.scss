@@ -6,10 +6,6 @@ $shadow: 4px 0px 10px rgba(0,0,0,0.1);
     transform: translateX($px);
     transition: transform 0.3s linear; 
 }
-@mixin animation ($name, $second){
-    animation-name: $name;
-    animation-duration: $second;
-}
 
 //sidebar 
 .sidebar {
