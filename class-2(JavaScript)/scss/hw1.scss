@@ -1,0 +1,91 @@
+@import '_all.scss';
+
+$pink: #FF7396;
+$lemonyellow: #fae77c;
+$cream: #FFFFDE;
+$pupple: #C499BA;
+
+
+.alert-area {
+    width: 90%;
+    max-width: 700px;
+    margin: 80px auto;
+    .alert-box {
+        padding: 16px 24px;
+        border-radius: 10px;
+        display: flex;
+        margin-top: 20px;
+    }
+    p {width: 95%;}
+    .icon_close {
+        font-weight: 700;
+        width: 5%;
+        height: 100%;
+        align-items: center;
+        cursor: pointer;
+    }
+    .pink {background-color: $pink;}
+    .lemonyellow {background-color: $lemonyellow;}
+    .cream {background-color: $cream;}
+    .pupple {background-color: $pupple;}
+    .alert-btn {
+        padding: 12px 24px;
+        background-color: $orange;
+        border: 1px solid $orange;
+        border-radius: 25px;
+        margin: 20px auto;
+        display: block;
+        color: $white;
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
+
+.alert-box2 {
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+    display: block;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: $shadow;
+    input {
+        width: 90%;
+        padding: 8px 24px;
+        border-radius: 20px;
+        border: 0.7px solid $gray3;
+        margin-top: 12px;
+    }
+    .alert-buttons {
+        display: flex;
+        justify-content: center;
+    }
+    button {
+        margin: 20px 16px 0px 0px;
+        padding: 8px 24px;
+        background-color: $pink;
+        border: 1px solid $pink;
+        border-radius: 20px;
+        color: $white;
+        font-weight: 500;
+    }
+}
+.nav {
+    width: 90%;
+    max-width: 700px;
+    margin: auto;
+}
+.nav-menu {
+    padding: 8px 24px;
+    background-color: $pink;
+    border: 1px solid $pink;
+    border-radius: 20px;
+    color: $white;
+}
+.nav-menu-list {
+    width: 700px;
+    display: none;
+}
+.show {
+    display: block;
+}

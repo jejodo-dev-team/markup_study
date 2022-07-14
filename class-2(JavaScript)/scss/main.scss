@@ -1,0 +1,45 @@
+@import '_all.scss'; 
+
+.main-title{
+    text-align: center;
+    margin-top: 80px;
+    .mainhome-btn {margin-top: 40px;}
+    a {
+        text-decoration: none;
+        color: $white;
+        background-color: $black;
+        padding: 8px 24px 6px;
+        font-weight: 500;
+        border-radius: 20px;
+    }
+}
+
+.homework-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 80px auto;
+    width: 90%;
+    max-width: 1000px;
+    a{text-decoration: none;}
+    .hw-title {
+        margin-top: 12px;
+    }
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    box-shadow: $shadow;
+    color: $white;
+    padding: 24px;
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: scale(0.9);
+}
+.homework1 {background-color: $black;}
+.homework2 {background-color: $gray4;}
+.homework3 {background-color: $gray3;}
+.homework4 {background-color: $gray2;}
+.homework5 {background-color: $gray1;}
