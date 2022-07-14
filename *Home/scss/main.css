@@ -1,0 +1,222 @@
+* {
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: url("../img/favicon.png") 20 30, auto;
+}
+
+.main {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-layout {
+  width: 90%;
+  max-width: 560px;
+}
+
+.char {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.char img {
+  width: 160px;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.char img:hover {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.class-container {
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.class-container a {
+  text-decoration: none;
+}
+
+.class-container .class {
+  width: 120px;
+  height: 120px;
+  margin-left: -20px;
+  border-radius: 100px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.class-container .first {
+  background-color: #000;
+}
+
+.class-container .second {
+  background-color: #333;
+}
+
+.class-container .third {
+  background-color: #555;
+}
+
+.class-container .fourth {
+  background-color: #777;
+}
+
+.class-container .class:hover {
+  -webkit-transform: translateY(-20px) scale(1.1);
+          transform: translateY(-20px) scale(1.1);
+}
+
+.info-container {
+  width: 100%;
+  height: 800px;
+  color: #fff;
+  background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info-container .information {
+  width: 70%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.info-text {
+  width: 60%;
+  margin-top: 100px;
+}
+
+.info-text h4 {
+  font-weight: 400;
+  margin-top: 12px;
+  line-height: 24px;
+}
+
+.info-text ul {
+  margin-top: 28px;
+  padding-left: 20px;
+  width: 70%;
+}
+
+.info-text li {
+  font-size: 20px;
+}
+
+.info-text span {
+  font-size: 12px;
+  color: #999;
+}
+
+.info-text p {
+  font-size: 14px;
+  color: #999;
+  margin: 12px auto;
+}
+
+.contact-icon {
+  width: 50%;
+  margin-top: 280px;
+}
+
+.contact-icon img {
+  width: 32px;
+  margin-right: 8px;
+}
+
+.working {
+  width: 40%;
+  position: -webkit-sticky;
+  position: sticky;
+  margin: 80px auto;
+  top: 200px;
+}
+
+.working img {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .info-container {
+    height: 900px;
+  }
+  .information {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .info-text {
+    width: 100%;
+  }
+  .info-text ul {
+    width: 100%;
+  }
+  .contact-icon {
+    margin-top: 12px;
+  }
+  .working {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

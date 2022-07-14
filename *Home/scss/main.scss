@@ -1,0 +1,131 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    cursor: url('../img/favicon.png') 20 30, auto;
+}
+//값 지정해두기
+$red: #e43121;
+$orange: #fb7121;
+$yellow: #ffd900;
+$blue: #3AB4F2;
+$pupple: #bb85ae;
+$gray1: #999;
+$gray2: #777;
+$gray3: #555;
+$gray4: #333;
+$black: #000;
+$white: #fff;
+$shadow: 0px 4px 10px rgba(0,0,0,0.1);
+
+//반복되는 코드들 
+@mixin flex-display ($justify, $align){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+//메인
+.main{
+    height: 100vh;
+    @include flex-display(center, center);
+}
+
+.main-layout {
+    width: 90%;
+    max-width: 560px;
+}
+.char {
+    @include flex-display(center, center);
+    img {width: 160px; transition: transform 1s;}
+    img:hover {
+        transform: rotate(180deg);
+    }
+}
+.class-container {
+    margin: 20px;
+    @include flex-display(center, center);
+    flex-wrap: wrap;
+    a {text-decoration: none;}
+    .class {
+        width: 120px;
+        height: 120px;
+        margin-left: -20px;
+        border-radius: 100px;
+        transition: transform 0.3s;
+        text-decoration: none;
+        color: $white;
+        font-weight: 500;
+        font-size: 18px;  
+        @include flex-display(center, center)
+    }
+    .first{background-color: $black;}
+    .second{background-color: $gray4;}
+    .third{background-color: $gray3;}
+    .fourth{background-color: $gray2;}
+    .class:hover {transform: translateY(-20px) scale(1.1);}
+}
+
+.info-container {
+    width: 100%;
+    height: 800px;
+    color: $white;
+    background-color: $black;
+    @include flex-display(center, center);
+    .information {
+        width: 70%;
+        height: 100%;
+        @include flex-display(center, flex-start);
+    }
+}
+.info-text {
+    width: 60%;
+    margin-top: 100px;
+    h4 {
+        font-weight: 400;
+        margin-top: 12px;
+        line-height: 24px;
+    }
+    ul {
+        margin-top: 28px;
+        padding-left: 20px;
+        width: 70%;
+    }
+    li {
+        font-size: 20px;
+    }
+    span {
+        font-size: 12px;
+        color: $gray1;
+    }
+    p {
+        font-size: 14px;
+        color: $gray1;
+        margin: 12px auto;
+    }
+}
+.contact-icon {
+    width: 50%;
+    margin-top: 280px;
+    img {
+        width: 32px;
+        margin-right: 8px;
+    }
+}
+.working {
+    width: 40%;
+    position: sticky;
+    margin: 80px auto;
+    top: 200px;
+    img {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .info-container {height: 900px;}
+    .information {
+        flex-direction: column;
+    }
+    .info-text {width: 100%; ul {width: 100%;}}
+    .contact-icon {margin-top: 12px;}
+    .working {width: 100%;}
+}

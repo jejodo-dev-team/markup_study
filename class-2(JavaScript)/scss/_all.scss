@@ -1,0 +1,96 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    cursor: url('../img/main/favicon.png') 20 30, auto;
+}
+$red: #e43121;
+$orange: #fb7121;
+$yellow: #ffd900;
+$blue: #3AB4F2;
+$pupple: #bb85ae; 
+$gray1: #999;
+$gray2: #777;
+$gray3: #555;
+$gray4: #333;
+$black: #000;
+$white: #fff;
+$shadow: 0px 4px 10px rgba(0,0,0,0.1);
+
+@mixin hw-main-title-animation ($name, $second){
+    animation-name: $name;
+    animation-duration: $second;
+}
+
+// 숙제 메인타이틀
+.homework-main-title {
+    text-align: center;
+    padding-top: 80px;
+    
+    h4 {
+        margin-top: 20px;
+        @include hw-main-title-animation (title-description, 1.2s);
+    }
+    @keyframes title-description {
+        0% {transform: translateX(4000px)}
+        80% {transform: translateX(-10px) skew(-20deg)}
+        100% {transform: translateX(0px)}
+    }
+}
+
+// memo bod 
+.memo-container {
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 700px;
+    padding: 20px 32px 40px 32px;
+    margin: 32px auto 100px;
+    border-radius: 10px;
+}
+.memo-container h5 {
+    color: #4498F2;
+    margin-bottom: 8px;
+}
+.memo-date {
+    font-size: 12px;
+    color: #999;
+    margin-left: 8px;
+    font-weight: 400;
+}
+.memo-text {
+    margin-top: 16px;
+    line-height: 24px;
+}
+.memo-line {
+    width: 90%;
+    max-width: 700px;
+    margin: 60px auto 0px;
+    opacity: 50%;
+}
+
+
+// main floating btn 
+.main-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #fff;
+    color: #000;
+    font-weight: 700;
+    font-size: 16px;
+    border: 1px solid #000;
+    border-radius: 30px;
+    padding: 16px 20px 16px 20px;
+    cursor: pointer;
+    transition: transform 0.3s linear;
+}
+
+.main-btn:hover {
+    background-color: #000;
+    color: #fff;
+    transform: rotate(180deg);
+}
+.main-btn:active {
+    transform: scale(0.7);
+}

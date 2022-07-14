@@ -1,0 +1,235 @@
+* {
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: url("../img/main/favicon.png") 20 30, auto;
+}
+
+.homework-main-title {
+  text-align: center;
+  padding-top: 80px;
+}
+
+.homework-main-title h4 {
+  margin-top: 20px;
+  -webkit-animation-name: title-description;
+          animation-name: title-description;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+}
+
+@-webkit-keyframes title-description {
+  0% {
+    -webkit-transform: translateX(4000px);
+            transform: translateX(4000px);
+  }
+  80% {
+    -webkit-transform: translateX(-10px) skew(-20deg);
+            transform: translateX(-10px) skew(-20deg);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes title-description {
+  0% {
+    -webkit-transform: translateX(4000px);
+            transform: translateX(4000px);
+  }
+  80% {
+    -webkit-transform: translateX(-10px) skew(-20deg);
+            transform: translateX(-10px) skew(-20deg);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+.memo-container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 700px;
+  padding: 20px 32px 40px 32px;
+  margin: 32px auto 100px;
+  border-radius: 10px;
+}
+
+.memo-container h5 {
+  color: #4498F2;
+  margin-bottom: 8px;
+}
+
+.memo-date {
+  font-size: 12px;
+  color: #999;
+  margin-left: 8px;
+  font-weight: 400;
+}
+
+.memo-text {
+  margin-top: 16px;
+  line-height: 24px;
+}
+
+.memo-line {
+  width: 90%;
+  max-width: 700px;
+  margin: 60px auto 0px;
+  opacity: 50%;
+}
+
+.main-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #fff;
+  color: #000;
+  font-weight: 700;
+  font-size: 16px;
+  border: 1px solid #000;
+  border-radius: 30px;
+  padding: 16px 20px 16px 20px;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+
+.main-btn:hover {
+  background-color: #000;
+  color: #fff;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.main-btn:active {
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+
+.alert-area {
+  width: 90%;
+  max-width: 700px;
+  margin: 80px auto;
+}
+
+.alert-area .alert-box {
+  padding: 16px 24px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+}
+
+.alert-area p {
+  width: 95%;
+}
+
+.alert-area .icon_close {
+  font-weight: 700;
+  width: 5%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.alert-area .pink {
+  background-color: #FF7396;
+}
+
+.alert-area .lemonyellow {
+  background-color: #fae77c;
+}
+
+.alert-area .cream {
+  background-color: #FFFFDE;
+}
+
+.alert-area .pupple {
+  background-color: #C499BA;
+}
+
+.alert-area .alert-btn {
+  padding: 12px 24px;
+  background-color: #fb7121;
+  border: 1px solid #fb7121;
+  border-radius: 25px;
+  margin: 20px auto;
+  display: block;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.alert-box2 {
+  width: 90%;
+  max-width: 700px;
+  margin: 40px auto;
+  display: block;
+  padding: 24px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.alert-box2 input {
+  width: 90%;
+  padding: 8px 24px;
+  border-radius: 20px;
+  border: 0.7px solid #555;
+  margin-top: 12px;
+}
+
+.alert-box2 .alert-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.alert-box2 button {
+  margin: 20px 16px 0px 0px;
+  padding: 8px 24px;
+  background-color: #FF7396;
+  border: 1px solid #FF7396;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.nav {
+  width: 90%;
+  max-width: 700px;
+  margin: auto;
+}
+
+.nav-menu {
+  padding: 8px 24px;
+  background-color: #FF7396;
+  border: 1px solid #FF7396;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.nav-menu-list {
+  width: 700px;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+/*# sourceMappingURL=hw1.css.map */
