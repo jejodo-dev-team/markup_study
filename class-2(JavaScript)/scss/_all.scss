@@ -94,3 +94,38 @@ $shadow: 0px 4px 10px rgba(0,0,0,0.1);
 .main-btn:active {
     transform: scale(0.7);
 }
+
+//buttons
+
+.Main-btn {
+    margin: auto;
+    display: block;
+    padding: 12px 44px;
+    border-radius: 25px;
+    border: 1px solid ;
+}
+.m-btn {
+    padding: 6px 24px;
+    border: 1px solid $black;
+    border-radius: 20px;
+}
+.white-btn {
+    background-color: $white;
+    color: $black;
+    font-weight: 500;
+}
+.white-btn:hover {
+    background-color: $black;
+    color: $white;
+}
+.black-btn {
+    background-color: $black;
+    color: $white;
+    font-weight: 500;
+}
+.black-btn:hover {
+    background-color: $white;
+    color: $black;
+}
+
+
