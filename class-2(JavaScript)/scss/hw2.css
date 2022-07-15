@@ -227,8 +227,5 @@
 .menu .show-list {
   height: 100px;
   visibility: visible;
-  overflow: hidden;
-  -webkit-transition: height 0.5s;
-  transition: height 0.5s;
 }
 /*# sourceMappingURL=hw2.css.map */

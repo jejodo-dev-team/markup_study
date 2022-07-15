@@ -179,6 +179,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin: 80px auto;
+  padding: 0px;
   width: 90%;
   max-width: 1000px;
   list-style: none;
