@@ -115,6 +115,42 @@
           transform: scale(0.7);
 }
 
+.Main-btn {
+  margin: auto;
+  display: block;
+  padding: 12px 44px;
+  border-radius: 25px;
+  border: 1px solid;
+}
+
+.m-btn {
+  padding: 6px 24px;
+  border: 1px solid #000;
+  border-radius: 20px;
+}
+
+.white-btn {
+  background-color: #fff;
+  color: #000;
+  font-weight: 500;
+}
+
+.white-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.black-btn {
+  background-color: #000;
+  color: #fff;
+  font-weight: 500;
+}
+
+.black-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
 .alert-area {
   width: 90%;
   max-width: 700px;
