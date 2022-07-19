@@ -54,9 +54,9 @@
 
         //삼육구 게임 만들기 
         function Game369 (num) {
-            if (num % 9 ==0) {
+            if (num % 9 === 0) {
                 console.log('박수x2');
-            } else if (num % 3 == 0 ) {
+            } else if (num % 3 === 0 ) {
                 console.log('박수');
             } else  {
                 console.log('통과');
@@ -66,7 +66,7 @@
         //공인중개사 시험점수 입력하면 합격인지 알려주는 함수 
         //2개 과목 100점만점, 두 과목 합해서 120점 이상 합격. 한 과목 40점 미만이면 불합격 
         function TestScore (num1, num2) {
-            if (0< num1 < 40 || 0< num2 <40) {
+            if (0< num1 < 40 || 0 < num2 < 40) {
                 console.log('다시 도전하세요~');
             } else if (num1 + num2 >= 120) {
                 console.log('합격입니다~~🥳');
@@ -80,13 +80,13 @@
             if (document.getElementById('game369-number').value == '') { //입력 안했을 때
                 e.preventDefault();
                 document.getElementsByClassName('message-game')[0].classList.add('error-show');
-            } else if (document.getElementById('game369-number').value %'9' == '0') {
+            } else if (document.getElementById('game369-number').value % 9 === 0 ) {
                 e.preventDefault();
                 document.getElementsByClassName('message-game')[0].classList.remove('error-show');
                 document.getElementsByClassName('message-game')[1].classList.remove('correct-show');
                 document.getElementsByClassName('message-game')[2].classList.add('correct-show');
                 document.getElementsByClassName('message-game')[3].classList.remove('correct-show');
-            } else if (document.getElementById('game369-number').value %'3' == '0') {
+            } else if (document.getElementById('game369-number').value % 3 === 0) {
                 e.preventDefault();
                 document.getElementsByClassName('message-game')[0].classList.remove('error-show');
                 document.getElementsByClassName('message-game')[1].classList.add('correct-show');
