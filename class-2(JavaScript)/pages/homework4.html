@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숙제 4</title>
+    <link href="../scss/hw4.css" rel="stylesheet">
+    <link rel="icon" href="../img/main/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <!-- 메인 타이틀 -->
+    <div class="homework-main-title">
+        <h1>🔥 if/else, function 레벨업! 🔥</h1>
+        <h4>뉴비의 레벨업 가보자 가보자~🏃🏻‍♀️</h4>
+    </div>
+
+    <form action="" class="game369-form">
+        <div class="form-head">
+            <h2>3,6,9 game 🎮</h2>
+            <p>👏 삼육구 삼육구~ 원하는 숫자를 입력해보세요! 👏</p>
+        </div>
+        <div class="input-box">
+            <input type="text" name="" id="game369-number" placeholder="삼육구삼육구~">
+            <div class="error message-game">🚨 숫자를 입력해주세요!</div>
+            <div class="correct message-game">박수 한 번~~👏</div>
+            <div class="correct message-game">박수 두 번~~👏👏</div>
+            <div class="correct message-game">통과 😝</div>
+
+            <button type="submit" class="game-number-submit Main-btn black-btn">확인!</button>
+        </div>
+    </form>
+
+    <!-- 숙제 후기 작성 -->
+    <hr class="memo-line">
+    <div class="memo-container">
+        <h5>숙제 후기</h5>
+        <h3>[#4] if/else, function 레벨업! 🔥
+            <span class="memo-date">2022. 07. 19</span></h3>
+        <p class="memo-text"> 오늘은 어제 배웠던 이프엘스를 활용해서 심화 과제를 해보았다. 솔직히 너무 감이 안와서 답을 미리 보긴 했는데.. 
+            보고 나니까 훨씬 이해가 잘 되었다. 다양한 변수에서도 오류없이 잘 동작하는 화면을 만드는건 참 어려운 것 같다. 
+            계속 하다보니 반복되는 것들이 엄청 많은데 이것들을 잘 통합해서 간략히 쓰는게 진짜 능력인 것 같다. 
+            개발하는 사람들은 다 똑똑한듯 ㅎ 어렵다 어려워~ 그래도 어찌저찌 해내는게 신기하다 ㅎㅎ 이래서 다들 학원을 다니고 강의를 듣는구나 
+            얼른 멋쟁이 애니메이션 만들고 싶다. 그리고 이 화면들을 만들어보니까 내가 그동안 디자인 했던 화면과 기능들이 어떻게 동작하는건지 
+            얼핏 감이 와서 신기하고 조금은 도움이 되는 것 같다..! 
+        </p>
+    </div>
+    <!-- 플로팅 버튼 -->
+    <a href="class-2-main.html">
+        <button class="main-btn">H</button>
+    </a> 
+
+    <script>
+
+        //삼육구 게임 만들기 
+        function Game369 (num) {
+            if (num % 9 === 0) {
+                console.log('박수x2');
+            } else if (num % 3 === 0 ) {
+                console.log('박수');
+            } else  {
+                console.log('통과');
+            }
+        }
+
+        //공인중개사 시험점수 입력하면 합격인지 알려주는 함수 
+        //2개 과목 100점만점, 두 과목 합해서 120점 이상 합격. 한 과목 40점 미만이면 불합격 
+        function TestScore (num1, num2) {
+            if (0< num1 < 40 || 0 < num2 < 40) {
+                console.log('다시 도전하세요~');
+            } else if (num1 + num2 >= 120) {
+                console.log('합격입니다~~🥳');
+            } else {
+            console.log('떼잉~ 공부다시 해오세요');
+            }
+        }
+
+        //화면에서 테스트 해보기
+        document.getElementsByClassName('game-number-submit')[0].addEventListener('click', function(e){
+            if (document.getElementById('game369-number').value == '') { //입력 안했을 때
+                e.preventDefault();
+                document.getElementsByClassName('message-game')[0].classList.add('error-show');
+            } else if (document.getElementById('game369-number').value % 9 === 0 ) {
+                e.preventDefault();
+                document.getElementsByClassName('message-game')[0].classList.remove('error-show');
+                document.getElementsByClassName('message-game')[1].classList.remove('correct-show');
+                document.getElementsByClassName('message-game')[2].classList.add('correct-show');
+                document.getElementsByClassName('message-game')[3].classList.remove('correct-show');
+            } else if (document.getElementById('game369-number').value % 3 === 0) {
+                e.preventDefault();
+                document.getElementsByClassName('message-game')[0].classList.remove('error-show');
+                document.getElementsByClassName('message-game')[1].classList.add('correct-show');
+                document.getElementsByClassName('message-game')[2].classList.remove('correct-show');
+                document.getElementsByClassName('message-game')[3].classList.remove('correct-show');
+            } else {
+                e.preventDefault();
+                document.getElementsByClassName('message-game')[0].classList.remove('error-show');
+                document.getElementsByClassName('message-game')[1].classList.remove('correct-show');
+                document.getElementsByClassName('message-game')[2].classList.remove('correct-show');
+                document.getElementsByClassName('message-game')[3].classList.add('correct-show');
+            }
+        });
+
+    </script>
+</body>
+</html>
