@@ -156,43 +156,53 @@
   color: #000;
 }
 
-.dimmed {
-  background-color: rgba(0, 0, 0, 0.7);
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: opacity 0.7s;
-  transition: opacity 0.7s;
-  z-index: 100;
+.dark-mode {
+  color: #fff;
+  background-color: #000;
 }
 
-.form-box {
+.darkmode-badge {
+  margin: 40px auto;
+  display: block;
+}
+
+.quize-form {
   width: 90%;
-  max-width: 360px;
-  margin: 20% auto;
-  padding: 20px;
+  max-width: 700px;
   background-color: #fff;
   border-radius: 10px;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 60px auto;
+  padding: 32px 24px 40px;
 }
 
-.form-box h3 {
+.form-head {
   text-align: center;
-  margin: 12px auto;
+  color: #000;
+  margin-top: 24px;
 }
 
-.form-box input {
+.form-head p {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.input-box {
+  display: block;
+  margin: auto;
+  width: 80%;
+  margin-top: 40px;
+}
+
+.input-box input {
   width: 100%;
   padding: 12px 20px 10px;
-  margin-top: 8px;
-  border-radius: 25px;
+  border-radius: 20px;
   border: 1px solid #555;
 }
 
-.form-box .error {
+.input-box .error {
   font-size: 12px;
   color: #e43121;
   font-weight: 700;
@@ -204,28 +214,36 @@
   transition: height 0.3s;
 }
 
-.form-box .error-show {
+.input-box .error-show {
   visibility: visible;
   height: 20px;
 }
 
-.form-box .form-buttons {
-  margin: 20px auto 0px;
+.input-box .correct {
+  color: #3AB4F2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 16px;
+  margin: 0px auto;
+  font-size: 20px;
+  font-weight: 700;
+  height: 0px;
+  overflow: hidden;
+  visibility: hidden;
+  -webkit-transition: height 0.3s;
+  transition: height 0.3s;
 }
 
-.modal-show {
+.input-box .correct-show {
   visibility: visible;
-  opacity: 1;
+  margin: 28px auto 0px;
+  height: 40px;
 }
 
-.login-modal {
-  margin-top: 60px;
+.input-box .quize-answer-submit {
+  margin-top: 32px;
 }
-/*# sourceMappingURL=hw3.css.map */
+/*# sourceMappingURL=hw5.css.map */

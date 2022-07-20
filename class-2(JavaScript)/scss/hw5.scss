@@ -1,6 +1,15 @@
 @import '_all.scss';
 
-.game369-form {
+.dark-mode{
+    color: $white;
+    background-color: $black;
+}
+.darkmode-badge {
+    margin: 40px auto;
+    display: block;
+}
+
+.quize-form {
     width: 90%;
     max-width: 700px;
     background-color: $white;
@@ -11,6 +20,7 @@
 }
 .form-head {
     text-align: center;
+    color: $black;
     margin-top: 24px;
     p {
         margin-top: 12px;
@@ -59,16 +69,7 @@
         margin: 28px auto 0px;
         height: 40px;
     }
-    .game-number-submit {
+    .quize-answer-submit {
         margin-top: 32px;
     }
-}
-.dark-mode{
-    color: $white;
-    background-color: $black;
-}
-
-.darkmode-badge {
-    margin: 40px auto;
-    display: block;
 }
