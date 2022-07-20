@@ -47,20 +47,24 @@ $shadow: 0px 4px 10px rgba(0,0,0,0.1);
     padding: 20px 32px 40px 32px;
     margin: 32px auto 100px;
     border-radius: 10px;
-}
-.memo-container h5 {
-    color: #4498F2;
-    margin-bottom: 8px;
-}
-.memo-date {
-    font-size: 12px;
-    color: #999;
-    margin-left: 8px;
-    font-weight: 400;
-}
-.memo-text {
-    margin-top: 16px;
-    line-height: 24px;
+    h5 {
+        color: #4498F2;
+        margin-bottom: 8px;
+    }
+    h3 {
+        color: $black;
+    }
+    .memo-date {
+        font-size: 12px;
+        color: #999;
+        margin-left: 8px;
+        font-weight: 400;
+    }
+    .memo-text {
+        margin-top: 16px;
+        line-height: 24px;
+        color: $black;
+    }
 }
 .memo-line {
     width: 90%;

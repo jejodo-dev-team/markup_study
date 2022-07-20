@@ -23,6 +23,9 @@
     width: 90%;
     max-width: 1000px;
     list-style: none;
+    .homework {
+        position: relative;
+    }
     a{text-decoration: none;}
     .hw-title {
         margin-top: 12px;
@@ -45,3 +48,11 @@
 .homework3 {background-color: $gray3;}
 .homework4 {background-color: $gray2;}
 .homework5 {background-color: $gray1;}
+
+.item__dimd {
+    position: absolute;
+    background-color: $red;
+    width: 200px;
+    height: 300px;
+    z-index: 20;
+}

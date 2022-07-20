@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숙제 4</title>
+    <link href="../scss/hw5.css" rel="stylesheet">
+    <link rel="icon" href="../img/main/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <!-- 메인 타이틀 -->
+    <div class="homework-main-title">
+        <h1>🔥 변수, 사칙연산 실력향상 🔥</h1>
+        <h4>실력향상 가보자! ☃︎</h4>
+    </div>
+
+    <button class="darkmode-badge Main-btn black-btn">dark-mode</button>
+
+    <!-- 퀴즈 -->
+    <form action="" class="quize-form">
+        <div class="form-head">
+            <h2>Q: 차차의 생일은?</h2>
+            <p>언제일까아요~?</p>
+        </div>
+        <div class="input-box">
+            <input type="text" name="" id="answer" placeholder="0000.00.00">
+            <div class="error message-game">🚨 맞춰봐~~</div>
+            <div class="error message-game">🚨 땡 🚨</div>
+            <div class="correct message-game">정답입니다~👏</div>
+
+            <button type="submit" class="quize-answer-submit Main-btn black-btn">제출</button>
+        </div>
+    </form>
+
+    <!-- 숙제 후기 작성 -->
+    <hr class="memo-line">
+    <div class="memo-container">
+        <h5>숙제 후기</h5>
+        <h3>[#5] var, let, const를 활용한 심화 수업
+            <span class="memo-date">2022. 07. 20</span></h3>
+        <p class="memo-text"> 어제 배웠던걸로 심화 문제들을 풀었다. var, let, const 변수를 배우고 이걸로 다양한 문제를 푸는 과제였다. 
+            이자율 계산, 이상하게 리필해주는 커피집에서 최대한 커피를 마실 수 있도록 도와주는 계산기, 그리고 퀴즈 맞추기를 배웠다 ㅎㅎ 
+            초딩 수학 수업으로 돌아간 것 같은 느낌이었다. 이래서 초딩들이 코딩을 배우는 건가..? ㅋㅋㅋㅋ 아무튼 재밌당 얼른 다른 것들도 배우고 싶다. 
+        </p>
+    </div>
+    <!-- 플로팅 버튼 -->
+    <a href="class-2-main.html">
+        <button class="main-btn">H</button>
+    </a> 
+
+    <script>
+
+        //다크모드 
+        var count = 0;
+        
+        document.getElementsByClassName('darkmode-badge')[0].addEventListener('click', function() {
+            count += 1;
+            if (count % 2 === 0){   
+                document.body.classList.add('dark-mode')
+            } else {
+                document.body.classList.remove('dark-mode')
+            }
+        })
+
+        //나이와 출신 변수 선언
+        var myage = 27;
+        const myhometown = '창원';
+
+        //이자율 계산하기 
+        var 예금액 = 50000;
+        var 미래예금액 = 0;
+
+        //5만원 미만이면 이율이 연 15퍼, 5만원 이상이면 연 20퍼 2년뒤 총 예금액 계산하기 
+
+        if (예금액 >= 50000) {
+            미래예금액 = 예금액 * 1.2 * 1.2 ;
+        } else {
+            미래예금액 = 예금액 * 1.15 * 1.15 ;
+        }
+        console.log(미래예금액)
+        
+        //커피 리필을 이상하게 해주는 곳. 최대한 마실 수 있는 커피양은?
+        //방금 마신 커피의 3분의 2만큼 총 2번 리필해주는 카페가 있다. 
+        //처음 커피를 90ml 주문하면 첫 리필은 60ml 해주고 그 다음 40ml를 해주는 카페 
+        //처음 주문한 양에 따라서 최대한 마실 수 있는 커피를 콘솔창에 계산해주는 코드 
+        var firstcoffee = 360;
+        var secondcoffee = firstcoffee * 2/3;
+        var thirdcoffee = secondcoffee * 2/3; 
+        
+        console.log(firstcoffee + secondcoffee + thirdcoffee)
+
+        var first = 360;
+        var total = 0;
+        
+        total = first + first * 2/3 + first * 2/3 * 2/3
+
+        console.log(total)
+
+        //퀴즈 결과 
+        var answer = '1996.10.23';
+        
+        document.getElementsByClassName('quize-answer-submit')[0].addEventListener('click', function(e){
+            if (document.getElementById('answer').value == '') { //입력 안했을 때
+                e.preventDefault();
+                document.getElementsByClassName('message-game')[0].classList.add('error-show');
+                document.getElementsByClassName('message-game')[1].classList.remove('error-show');
+                document.getElementsByClassName('message-game')[2].classList.remove('correct-show');
+            } else if (document.getElementById('answer').value === answer ) {
+                e.preventDefault();
+                document.getElementsByClassName('message-game')[0].classList.remove('error-show');
+                document.getElementsByClassName('message-game')[1].classList.remove('error-show');
+                document.getElementsByClassName('message-game')[2].classList.add('correct-show');
+            } else {
+                e.preventDefault();
+                document.getElementsByClassName('message-game')[0].classList.remove('error-show');
+                document.getElementsByClassName('message-game')[1].classList.add('error-show');
+                document.getElementsByClassName('message-game')[2].classList.remove('correct-show');
+            }
+        });
+
+    </script>
+</body>
+</html>
