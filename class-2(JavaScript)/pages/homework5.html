@@ -106,7 +106,7 @@
                 document.getElementsByClassName('message-game')[0].classList.add('error-show');
                 document.getElementsByClassName('message-game')[1].classList.remove('error-show');
                 document.getElementsByClassName('message-game')[2].classList.remove('correct-show');
-            } else if (document.getElementById('answer').value == answer ) {
+            } else if (document.getElementById('answer').value === answer ) {
                 e.preventDefault();
                 document.getElementsByClassName('message-game')[0].classList.remove('error-show');
                 document.getElementsByClassName('message-game')[1].classList.remove('error-show');
