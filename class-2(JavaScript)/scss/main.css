@@ -190,10 +190,6 @@
   list-style: none;
 }
 
-.homework-container .homework {
-  position: relative;
-}
-
 .homework-container a {
   text-decoration: none;
 }
@@ -202,7 +198,7 @@
   margin-top: 12px;
 }
 
-.card {
+.homework-container .card {
   width: 200px;
   height: 300px;
   -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -215,36 +211,95 @@
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
-.card:hover {
+.homework-container .card:hover {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }
 
-.homework1 {
-  background-color: #000;
+@media screen and (max-width: 768px) {
+  .homework-container .card {
+    width: 250px;
+    height: 350px;
+  }
 }
 
-.homework2 {
-  background-color: #333;
+.homework-container .hw1 {
+  background-color: #b7b7b8;
 }
 
-.homework3 {
-  background-color: #555;
+.homework-container .hw2 {
+  background-color: #ababab;
 }
 
-.homework4 {
-  background-color: #777;
+.homework-container .hw3 {
+  background-color: #a1a1a1;
 }
 
-.homework5 {
-  background-color: #999;
+.homework-container .hw4 {
+  background-color: #9a9a9b;
 }
 
-.item__dimd {
-  position: absolute;
-  background-color: #e43121;
-  width: 200px;
-  height: 300px;
-  z-index: 20;
+.homework-container .hw5 {
+  background-color: #909090;
+}
+
+.homework-container .hw6 {
+  background-color: #868786;
+}
+
+.homework-container .hw7 {
+  background-color: #7e7e7e;
+}
+
+.homework-container .hw8 {
+  background-color: #767676;
+}
+
+.homework-container .hw9 {
+  background-color: #696a6a;
+}
+
+.homework-container .hw10 {
+  background-color: #5f6061;
+}
+
+.homework-container .hw11 {
+  background-color: #575657;
+}
+
+.homework-container .hw12 {
+  background-color: #525251;
+}
+
+.homework-container .hw13 {
+  background-color: #474646;
+}
+
+.homework-container .hw14 {
+  background-color: #3d3d3c;
+}
+
+.homework-container .hw15 {
+  background-color: #323232;
+}
+
+.homework-container .hw16 {
+  background-color: #2b2b2a;
+}
+
+.homework-container .hw17 {
+  background-color: #212121;
+}
+
+.homework-container .hw18 {
+  background-color: #161716;
+}
+
+.homework-container .hw19 {
+  background-color: #0d0d0d;
+}
+
+.homework-container .hw20 {
+  background-color: #000000;
 }
 /*# sourceMappingURL=main.css.map */
