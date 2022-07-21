@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숙제 6</title>
+    <link href="../scss/hw6.css" rel="stylesheet">
+    <link rel="icon" href="../img/main/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <!-- 메인 타이틀 -->
+    <div class="homework-main-title">
+        <h1>🤯 이미지 슬라이드 만들기 🤯</h1>
+        <h4>어렵다 어려워 🥲</h4>
+    </div>
+
+    <!-- 타이머 -->
+    <div class="timer-box">
+        <div class="timer">
+            <div class="time"><h2 id="num">10</h2></div>
+            <div class="end-text"><h2>🚨끗!🚨</h2></div>
+        </div>
+    </div>
+
+    <div class="slide-container-box">
+        <div class="slide-container">
+            <div class="slide-box">
+                <img src="../img/hw6/썸네일-01.svg" alt="">
+            </div>
+            <div class="slide-box">
+                <img src="../img/hw6/썸네일-02.svg" alt="">
+            </div>
+            <div class="slide-box">
+                <img src="../img/hw6/썸네일-03.svg" alt="">
+            </div>
+            <div class="slide-box">
+                <img src="../img/hw6/썸네일-04.svg" alt="">
+            </div>
+            <div class="slide-box">
+                <img src="../img/hw6/썸네일-05.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="slide-btns">
+        <button class="before m-btn white-btn">이전</button>
+        <button class="slide-1 m-btn black-btn">1</button>
+        <button class="slide-2 m-btn black-btn">2</button>
+        <button class="slide-3 m-btn black-btn">3</button>
+        <button class="slide-4 m-btn black-btn">4</button>
+        <button class="slide-5 m-btn black-btn">5</button>
+        <button class="next m-btn white-btn">다음</button>
+    </div>
+
+
+    <!-- 숙제 후기 작성 -->
+    <hr class="memo-line">
+    <div class="memo-container">
+        <h5>숙제 후기</h5>
+        <h3>[#6] 이미지 슬라이드 만들기
+            <span class="memo-date">2022. 07. 21</span></h3>
+        <p class="memo-text"> 카운트 다운 하는 타이머와 이미지 슬라이드를 만들어 봤다. 
+            진짜 엄청 어렵다 흑흑 ㅠㅠㅠ 어찌저찌 해내긴 했는데.. 반응형까지 오늘 안에 하는건 무리다 
+            반응형 우찌하냐.. 원래 100vw로 하는 법을 알려주셔서 그거 대로 하긴 했는데 그럼 이미지가 내가 원하는 사ㅣㅇ즈로 안들어..가서 
+            일단 픽셀단위로 해뒀는데 반응형은 그러면 안되..지 않을까? 흐극 ㅠ 
+            기간이 지날수록 점점점점 어려워지는구만.. 신기하고 재밌지만 어렵당
+        </p>
+    </div>
+    <!-- 플로팅 버튼 -->
+    <a href="class-2-main.html">
+        <button class="main-btn">H</button>
+    </a> 
+
+    <script>
+
+        //이미지 슬라이드
+        var ViewImg = 1;
+        var Pages = 5;
+        var SlideImgWidth = 7;
+
+        document.getElementsByClassName('slide-1')[0].addEventListener('click', function() {
+            document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(0px)';
+            ViewImg === 1;
+        })
+        document.getElementsByClassName('slide-2')[0].addEventListener('click', function() {
+            document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-700px)';
+            ViewImg === 2;
+        })
+        document.getElementsByClassName('slide-3')[0].addEventListener('click', function() {
+            document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-1400px)';
+            ViewImg === 3;
+        })
+        document.getElementsByClassName('slide-4')[0].addEventListener('click', function() {
+            document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-2100px)';
+            ViewImg === 4;
+        })
+        document.getElementsByClassName('slide-5')[0].addEventListener('click', function() {
+            document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-2800px)';
+            ViewImg === 5;
+        })
+        
+        //이미지 슬라이드 다음 버튼
+            //하나씩 하는거(메모)
+            // document.getElementsByClassName('next')[0].addEventListener('click', function() {
+            //     if (ViewImg === 1){
+            //         document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-700px)';
+            //         ViewImg ++;
+            //     }else if (ViewImg === 2){
+            //         document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-1400px)';
+            //         ViewImg ++;
+            //     }
+            // })
+            //통합하기
+        document.getElementsByClassName('next')[0].addEventListener('click', function() {
+            if (ViewImg < Pages) {
+                document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-' + ViewImg * SlideImgWidth +'00px)';
+                ViewImg ++;
+            }            
+        })
+        
+        //이미지 슬라이드 이전 버튼     
+            //하나씩 하는거(메모) 
+            // document.getElementsByClassName('before')[0].addEventListener('click', function() {
+            //     if (ViewImg === 2){
+            //         document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(0%)';
+            //         ViewImg --;
+            //     }else if (ViewImg === 3){
+            //         document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-100%)';
+            //         ViewImg --;
+            //     }
+            // })
+            //통합하기
+        document.getElementsByClassName('before')[0].addEventListener('click', function() {
+            if (ViewImg > 0) {
+                ViewImg --;
+                document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-' + ViewImg * SlideImgWidth +'00px)';
+            }            
+        })
+        
+
+
+        //타이머
+        var count = 10;
+
+        setInterval(function() {
+            count -= 1;
+            if (count >= 0){
+                document.querySelector('#num').innerHTML = count;
+            }
+        }, 1000);
+
+        setTimeout(function Timer () {
+            document.getElementsByClassName('time')[0].classList.add('hide');
+            document.getElementsByClassName('end-text')[0].classList.add('show');
+        }, 11000);
+
+
+    </script>
+</body>
+</html>
