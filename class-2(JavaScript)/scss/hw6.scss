@@ -36,7 +36,7 @@
         visibility: hidden;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $mobile) {
     .timer{
         h2{font-size: 48px;}
     }
@@ -73,7 +73,7 @@
     justify-content: center;
     gap: 12px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $mobile) {
     .slide-container{
         height: 300px;
     }

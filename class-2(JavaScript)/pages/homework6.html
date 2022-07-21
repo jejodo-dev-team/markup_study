@@ -75,26 +75,28 @@
 
         //이미지 슬라이드
         var ViewImg = 1;
+        var Pages = 5;
+        var SlideImgWidth = 7;
 
         document.getElementsByClassName('slide-1')[0].addEventListener('click', function() {
             document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(0px)';
-            ViewImg == 1;
+            ViewImg === 1;
         })
         document.getElementsByClassName('slide-2')[0].addEventListener('click', function() {
             document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-700px)';
-            ViewImg == 2;
+            ViewImg === 2;
         })
         document.getElementsByClassName('slide-3')[0].addEventListener('click', function() {
             document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-1400px)';
-            ViewImg == 3;
+            ViewImg === 3;
         })
         document.getElementsByClassName('slide-4')[0].addEventListener('click', function() {
             document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-2100px)';
-            ViewImg == 4;
+            ViewImg === 4;
         })
         document.getElementsByClassName('slide-5')[0].addEventListener('click', function() {
             document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-2800px)';
-            ViewImg == 5;
+            ViewImg === 5;
         })
         
         //이미지 슬라이드 다음 버튼
@@ -110,8 +112,8 @@
             // })
             //통합하기
         document.getElementsByClassName('next')[0].addEventListener('click', function() {
-            if (ViewImg < 5) {
-                document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-' + ViewImg * 7 +'00px)';
+            if (ViewImg < Pages) {
+                document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-' + ViewImg * SlideImgWidth +'00px)';
                 ViewImg ++;
             }            
         })
@@ -131,7 +133,7 @@
         document.getElementsByClassName('before')[0].addEventListener('click', function() {
             if (ViewImg > 0) {
                 ViewImg --;
-                document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-' + ViewImg * 7 +'00px)';
+                document.getElementsByClassName('slide-container')[0].style.transform = 'translateX(-' + ViewImg * SlideImgWidth +'00px)';
             }            
         })
         
