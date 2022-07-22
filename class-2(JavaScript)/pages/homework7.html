@@ -52,19 +52,22 @@
 
     <script>
 
-        //박스를 끝까지 내리면 alert 띄우기 
-        window.addEventListener('scroll', function LogoChange () {
-            var ScrollAmount = document.getElementsByClassName('content')[0].scrollTop;
-            var BoxHeight = document.getElementsByClassName('content')[0].scrollHeight;
-            var RealHeight = document.getElementsByClassName('content')[0].clientHeight;
-            if (ScrollAmount + RealHeight > BoxHeight  -10) {
+        //박스를 끝까지 내리면 check box 띄우기
+        const CONTENT_SELECTOR = 'content'
+        var HeightMargin = 10
+
+        window.addEventListener('scroll', function () {
+            var ScrollAmount = document.getElementsByClassName(CONTENT_SELECTOR)[0].scrollTop;
+            var BoxHeight = document.getElementsByClassName(CONTENT_SELECTOR)[0].scrollHeight;
+            var RealHeight = document.getElementsByClassName(CONTENT_SELECTOR)[0].clientHeight;
+            if (ScrollAmount + RealHeight > BoxHeight - HeightMargin) {
                 document.getElementsByClassName('checkbox')[0].classList.add('checkbox-show');
             }   
         })
         
         //scroll bar
         //스크롤 100px 내리면 로고 폰트사이즈 작게 만들기
-        var ChangeHeight = 100;
+        const ChangeHeight = 100;
 
         window.addEventListener('scroll', function LogoChange () {
             if (window.scrollY > ChangeHeight) {
