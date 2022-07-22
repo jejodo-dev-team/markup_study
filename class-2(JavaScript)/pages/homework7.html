@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숙제 7</title>
+    <link href="../scss/hw7.css" rel="stylesheet">
+    <link rel="icon" href="../img/main/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">차차 숙제 모음집</div>
+    </nav>
+    
+    <!-- 메인 타이틀 -->
+    <div class="homework-main-title">
+        <h1>🤯 scroll event 🤯</h1>
+        <h4>어렵다 어려워22222 🥲</h4>
+    </div>
+    
+    <div class="content-container">
+        <div class="content-box">
+            <div class="content">
+                <p class="content-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores quaerat enim natus ad rerum doloremque suscipit quas, nisi totam sequi dolor itaque impedit laudantium atque beatae adipisci dolores. Ratione, recusandae.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut rerum fugit aliquam accusamus, amet laudantium necessitatibus deserunt facere iusto, voluptatem repellat itaque nulla exercitationem ipsum eveniet sunt id porro. Sed.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repellendus illum laboriosam commodi expedita nulla, dicta reprehenderit iste voluptate aperiam explicabo tempore dolore ab sint odio suscipit consectetur. Distinctio, doloremque.
+                </p>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox"><label for="sub">동의하기</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- 숙제 후기 작성 -->
+    <hr class="memo-line">
+    <div class="memo-container">
+        <h5>숙제 후기</h5>
+        <h3>[#7] 스크롤 이벤트
+            <span class="memo-date">2022. 07. 22</span></h3>
+        <p class="memo-text"> 오늘은 스크롤 위치를 계산하는 것을 배웠다. 날이갈수록 점점점점점점점점점 어려워진다.. 
+            스크롤을 특정 픽셀 이상으로 내리면 로고 크기가 작아지는 것과 각 div 박스들의 스크롤 값을 계산할 수 있는 것도 배웠다. 
+            정말 난이도가 갑자기 급상승했다..ㅎ 흐그극 그래도 해내서 뿌듯하다
+        </p>
+    </div>
+    <!-- 플로팅 버튼 -->
+    <a href="class-2-main.html">
+        <button class="main-btn">H</button>
+    </a>     
+
+
+    <script>
+
+        //박스를 끝까지 내리면 check box 띄우기
+        const CONTENT_SELECTOR = 'content'
+        var HeightMargin = 10
+
+        window.addEventListener('scroll', function () {
+            var ScrollAmount = document.getElementsByClassName(CONTENT_SELECTOR)[0].scrollTop;
+            var BoxHeight = document.getElementsByClassName(CONTENT_SELECTOR)[0].scrollHeight;
+            var RealHeight = document.getElementsByClassName(CONTENT_SELECTOR)[0].clientHeight;
+            if (ScrollAmount + RealHeight > BoxHeight - HeightMargin) {
+                document.getElementsByClassName('checkbox')[0].classList.add('checkbox-show');
+            }   
+        })
+        
+        //scroll bar
+        //스크롤 100px 내리면 로고 폰트사이즈 작게 만들기
+        const ChangeHeight = 100;
+
+        window.addEventListener('scroll', function LogoChange () {
+            if (window.scrollY > ChangeHeight) {
+                document.getElementsByClassName('logo')[0].classList.add('small-logo');
+            } else {
+                document.getElementsByClassName('logo')[0].classList.remove('small-logo');
+            }
+        })
+
+        // window.addEventListener('scroll', function() {
+        //     window.scrollTo(0,100);
+        //     window.scrollBY(0,100);
+        // })
+
+
+        //분과 초를->총 ms로 변환해주는 계산기
+        function MsCount (minute,second) {
+            return (minute * 60 + second) * 1000
+        }
+        console.log (MsCount(1,30))
+
+        //10% 할인가 뱉기 + 첫 구매일 경우 추가 1.5달러 할인
+        function Sale (Price, FirstBuy) {
+            var result = Price * 0.1;
+            if (FirstBuy === true) {
+                result = result - 1.5;
+            } 
+            return parseFloat(result.toFixed(2))
+        }
+        console.log (Sale(10.3,true))
+
+    </script>
+</body>
+</html>
