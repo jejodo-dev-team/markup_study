@@ -208,6 +208,7 @@
 
 .tab-content {
   display: none;
+  padding: 0px;
 }
 
 .show {
@@ -273,7 +274,14 @@
   margin-left: 1px;
 }
 
+.content-reaction button {
+  background-color: #fff;
+  border: none;
+  padding: 0px;
+}
+
 .content-reaction p {
+  margin-top: 3px;
   margin-left: 8px;
   font-weight: 500;
 }

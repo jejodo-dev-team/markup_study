@@ -41,9 +41,10 @@
 }
 .tab-content {
     display: none;
+    padding: 0px;
 }
 .show {
-display: block;
+    display: block;
 }
 
 .content-list {
@@ -83,10 +84,16 @@ display: block;
     font-size: 16px;
 }
 .content-reaction {
+    button {
+        background-color: $white;
+        border: none;
+        padding: 0px;
+    }
     display: flex;
     margin-top: 8px;
     margin-left: 1px;
     p {
+        margin-top: 3px;
         margin-left: 8px;
         font-weight: 500;
     }
