@@ -1,0 +1,116 @@
+@import '_all.scss';
+
+.banner-container {
+    width: 100%;
+    height: 300px;
+    background-color: $gray1;
+    display: flex;
+    justify-content: center;
+    background-image: url(../img/hw8/experimentLog_banner_pattern.svg);
+    background-position: top;
+    background-attachment: fixed;
+}
+
+.tab-container {
+    width: 90%;
+    max-width: 700px;
+    margin: 80px auto;
+}
+.tab-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0px auto 12px auto;
+    padding: 0;
+    border-bottom: 1px solid $black;
+}
+.tab-btn {
+    padding: 8px 16px 7px;
+    border-radius: 10px 10px 0px 0px;
+    border: 1px solid $black;
+    font-weight: 600;
+    margin-right: -1px;
+    margin-bottom: -1px;
+}
+.tab-btn:hover {
+    background-color: $black;
+    color: $white;
+}
+.tab-active {
+    background-color: $black;
+    color: $white;
+}
+.tab-content {
+    display: none;
+    padding: 0px;
+}
+.show {
+    display: block;
+}
+
+.content-list {
+    width: 100%;
+    background-color: $white;
+    border: 1px solid $black;
+    border-radius: 10px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+}
+.content-list:hover {
+    filter: brightness(0.9);
+}
+.user-profile {
+    border-radius: 50px;
+    img {
+        width: 76px;
+        height: 76px;
+    }
+}
+.content-text {
+    margin-left: 20px;
+}
+.content-data {
+    display: flex;
+    color: $gray2;
+    margin-left: 1px;
+    h6 {
+        margin-right: 8px;
+        font-size: 12px;
+    }
+}
+.content-title {
+    margin-top: 8px;
+    font-size: 16px;
+}
+.content-reaction {
+    button {
+        background-color: $white;
+        border: none;
+        padding: 0px;
+    }
+    display: flex;
+    margin-top: 8px;
+    margin-left: 1px;
+    p {
+        margin-top: 3px;
+        margin-left: 8px;
+        font-weight: 500;
+    }
+}
+.like {
+    display: flex;
+}
+.comment {
+    display: flex;
+    margin-left: 20px;
+}
+.coming-soon {
+    width: 90%;
+    margin: 20px auto;
+    img {
+        width: 400px;
+        margin: auto;
+        display: block;
+    }
+}
