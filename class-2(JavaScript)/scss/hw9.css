@@ -156,157 +156,146 @@
   color: #000;
 }
 
-.main-title {
-  text-align: center;
-  margin-top: 80px;
+.dimmed {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.7s;
+  transition: opacity 0.7s;
+  z-index: 100;
 }
 
-.main-title .mainhome-btn {
-  margin-top: 40px;
-}
-
-.main-title a {
-  text-decoration: none;
-  color: #fff;
-  background-color: #000;
-  padding: 8px 24px 6px;
-  font-weight: 500;
-  border-radius: 20px;
-}
-
-.homework-container {
+.form-box {
   width: 90%;
-  max-width: 1000px;
+  max-width: 360px;
+  margin: 20% auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-box h3 {
+  text-align: center;
+  margin: 12px auto;
+}
+
+.form-box input {
+  width: 100%;
+  padding: 12px 20px 10px;
+  margin-top: 8px;
+  border-radius: 25px;
+  border: 1px solid #555;
+}
+
+.form-box .error {
+  font-size: 12px;
+  color: #e43121;
+  font-weight: 700;
+  margin: 4px 0px 0px 20px;
+  height: 0px;
+  overflow: hidden;
+  visibility: hidden;
+  -webkit-transition: height 0.3s;
+  transition: height 0.3s;
+}
+
+.form-box .error-show {
+  visibility: visible;
+  height: 20px;
+}
+
+.form-box .form-buttons {
+  margin: 20px auto 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 80px auto;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0px;
-  list-style: none;
+  gap: 16px;
 }
 
-.homework-container a {
-  text-decoration: none;
+.modal-show {
+  visibility: visible;
+  opacity: 1;
 }
 
-.homework-container .card {
-  width: 200px;
-  height: 300px;
-  position: relative;
-  color: #fff;
-  padding: 24px;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+.login-modal {
+  margin-top: 60px;
 }
 
-.homework-container .card:hover {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+.card-container {
+  width: 90%;
+  max-width: 700px;
+  margin: 40px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
 }
 
-.homework-container .hw-title {
-  margin-top: 12px;
+.card-container .card {
+  width: 280px;
+  height: 100%;
+  border: 1px solid #999;
 }
 
-.homework-container .hw-date {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+.card-container .card-img {
+  width: 100%;
+  height: 200px;
+}
+
+.card-container .card-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card-container .card-body {
+  padding: 12px;
+  height: 40%;
+}
+
+.card-container .card-title {
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.card-container .card-body p {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.3);
+  font-weight: 700;
+  margin-left: 2px;
+  color: #3AB4F2;
+}
+
+.card-container .card-body button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  margin: 12px auto;
 }
 
 @media screen and (max-width: 768px) {
-  .homework-container .card {
-    width: 250px;
-    height: 350px;
+  .card-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card {
+    margin: auto;
+  }
+  .card-img {
+    height: 300px;
   }
 }
-
-.homework-container .hw1 {
-  background-color: #b7b7b8;
-}
-
-.homework-container .hw2 {
-  background-color: #ababab;
-}
-
-.homework-container .hw3 {
-  background-color: #a1a1a1;
-}
-
-.homework-container .hw4 {
-  background-color: #9a9a9b;
-}
-
-.homework-container .hw5 {
-  background-color: #909090;
-}
-
-.homework-container .hw6 {
-  background-color: #868786;
-}
-
-.homework-container .hw7 {
-  background-color: #7e7e7e;
-}
-
-.homework-container .hw8 {
-  background-color: #767676;
-}
-
-.homework-container .hw9 {
-  background-color: #696a6a;
-}
-
-.homework-container .hw10 {
-  background-color: #5f6061;
-}
-
-.homework-container .hw11 {
-  background-color: #575657;
-}
-
-.homework-container .hw12 {
-  background-color: #525251;
-}
-
-.homework-container .hw13 {
-  background-color: #474646;
-}
-
-.homework-container .hw14 {
-  background-color: #3d3d3c;
-}
-
-.homework-container .hw15 {
-  background-color: #323232;
-}
-
-.homework-container .hw16 {
-  background-color: #2b2b2a;
-}
-
-.homework-container .hw17 {
-  background-color: #212121;
-}
-
-.homework-container .hw18 {
-  background-color: #161716;
-}
-
-.homework-container .hw19 {
-  background-color: #0d0d0d;
-}
-
-.homework-container .hw20 {
-  background-color: #000000;
-}
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=hw9.css.map */
