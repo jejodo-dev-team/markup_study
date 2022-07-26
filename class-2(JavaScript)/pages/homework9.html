@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숙제 9</title>
+    <link href="../scss/hw9.css" rel="stylesheet">
+    <link rel="icon" href="../img/main/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <!-- 모달창 -->
+    <div class="dimmed">
+        <div class="form-box">
+            <form action="formResult.html">
+                <h3>로그인</h3>
+                <input type="text" name="" id="user-id" placeholder="아이디를 입력하세요">
+                <div class="error message-id">🚨 아이디를 입력하세요!</div>
+
+                <input type="password" name="" id="user-pw" placeholder="비밀번호를 입력하세요">
+                <div class="error message-pw">🚨 비밀번호를 입력하세요!</div>
+                <div class="error message-pw-length">🚨 비밀번호가 너무 짧습니다!</div>
+
+                <div class="form-buttons">
+                    <button type="button" class="modal-close m-btn white-btn">닫기</button>
+                    <button type="submit" class="modal-submit m-btn black-btn">전송</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 메인 타이틀 -->
+    <div class="homework-main-title">
+        <h1>☺︎ 약간 복잡한 Array & Object 데이터바인딩 ☻</h1>
+        <h4>재밌다 재미써~룰루 〠</h4>
+    </div>
+    <!-- 로그인 모달 버튼 -->
+    <button class="login-modal Main-btn black-btn">로그인하기</button>
+
+
+    <ul class="card-container">
+        <li class="card">
+            <div class="card-img">
+                <img src="../img/hw9/dozyjam.png">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p>가격 : <span class="card-price">70000</span></p>
+                <button class="m-btn black-btn">주문하기</button>
+            </div>
+        </li>
+        <li class="card">
+            <div class="card-img">
+                <img src="../img/hw9/dozy.png">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p>가격 : <span class="card-price">70000</span></p>
+                <button class="m-btn black-btn">주문하기</button>
+            </div>
+        </li>
+        <li class="card">
+            <div class="card-img">
+                <img src="../img/hw9/girokjam.png">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p>가격 : <span class="card-price">70000</span></p>
+                <button class="m-btn black-btn">주문하기</button>
+            </div>
+        </li>
+    </ul>
+      
+    <!-- 숙제 후기 작성 -->
+    <hr class="memo-line">
+    <div class="memo-container">
+        <h5>숙제 후기</h5>
+        <h3>[#9] 약간 복잡한 Array & Object 데이터 바인딩
+            <span class="memo-date">2022. 07. 26</span></h3>
+        <p class="memo-text"> 오늘은 모달창의 dimmed 영역을 누르면 모달창 닫는 기능과 client-side rendering 개발방식으로 
+            템플릿으로 기본 정보만 입력되어있는 곳에 javaScript로 변수에 저장된 정보를 입력해주는 것을 배웠다. 
+            <br><br> 
+            dimmed 영역을 눌렀을 때 모달창이 닫히는 기능은 dimmed 영역을 눌렀을 때 닫히기는 하는데, 모달창을 눌렀을 때도 닫히게 되는데
+            이유는 이벤트 버블링이라는 현상 때문이었다. 어떤 html 태그에 이벤트 발생시 그 모든 상위요소까지 이벤트가 실행이 되는데 
+            dimmed 안에 모달창 태그가 포함되어있기에 모달창을 눌렀을 때도 모달창의 상위요소인 dimmed도 누른걸로 인식된다고 한다. 
+            그렇기에 해결책은 특정함수를 넣어주는 건데, 이번의 경우 e.taget 이라는 실제 클릭한 요소를 알 수 있는 함수를 활용해서 
+            실제 dimmed 영역만 눌렀을 때 모달창 닫는 함수를 실행하도록 하였다. 
+            관련 이벤트 함수 메모: e.taget(실제 클릭한 요소), e.currentTarget(지금 이벤트 리스너가 달린 곳을 알려줌), e.preventDefault() (실행하면 이벤트 기본 동작을 막아줌 - submit 막기), e.stopPropagation() (실행하면 내 상위요소로의 이벤트 버블링을 중단)
+            <br><br> 
+            그리고 오늘은 카드들에 변수에 저장된 제목과 가격을 자바스크립트로 넣어주는 숙제를 했다. 
+            array 자료형과 object 자료형을 배웠고, 그 자료형 안에 들어가있는 자료를 선택하여 특정 html에 넣어주는 방법을 배웠다. 
+            배운 것을 활용해서 주어진 object 자료형에 입력된 정보를 만들어둔 카드들에 넣어주는 기능을 만들었고, 
+            반복되는 것들은 어제 배웠던 for 반복문을 활용해서 코드를 줄여보았다. 
+            <br><br> 
+            기능 개발을 할 때 항상 console.log를 활용해서 간단한 것부터 잘 나오는지 테스트를 해보면서
+            개발하는 것이 훨씬 쉽고 오류도 덜 나는 것 같다. 
+            그동안 어렵고 이해가 쉽지 않아서 좀 덜 재밌었는데, 오늘은 그동안 배운 것들을 잘 활용한 것 같고, 
+            이해도 잘 되어서 너무 재밌었다..! 중간중간 작년에 독학했을 때가 문득 생각나면서 아 그걸 이렇게 해결했으면
+            쉬웠겠다.. 라고 생각도 드는게 되게 신기하고 재밌었다. ㅎㅎ
+        </p>
+    </div>
+    <!-- 플로팅 버튼 -->
+
+    <a href="class-2-main.html">
+        <button class="main-btn">H</button>
+    </a>    
+
+    
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+    <script src="../js/hw9.js"></script>
+</body>
+</html>
