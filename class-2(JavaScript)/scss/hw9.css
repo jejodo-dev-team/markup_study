@@ -237,6 +237,8 @@
   display: -ms-flexbox;
   display: flex;
   gap: 12px;
+  list-style: none;
+  padding: 0px;
 }
 
 .card-container .card {

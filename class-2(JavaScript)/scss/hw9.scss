@@ -59,6 +59,8 @@
 .card-container {
     @include containerDefaultLayout(40px, flex);
     gap: 12px;
+    list-style: none;
+    padding: 0px;
     .card {
         width: 280px;
         height: 100%;
