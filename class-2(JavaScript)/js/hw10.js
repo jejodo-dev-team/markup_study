@@ -19,9 +19,9 @@ function 이름찾기2 (name) {
 
 // 입력한 값에 따라 메세지 표시해주기
 document.querySelector('.name-book button').addEventListener('click', function(e) {
+    e.preventDefault();
     for(let i = 0; i <출석부.length; i++) {
         if (document.querySelector('.name-book input').value === 출석부[i]) {
-            e.preventDefault();
             document.querySelector('.correct').classList.add('ms-show')
         }
     }
@@ -33,7 +33,7 @@ const 구구단 =  10;
 
 for (let k=2; k<구구단; k++) {
     for(let i = 1; i<구구단; i++) {
-            var answer = k * i ;
+            const answer = k * i ;
             console.log(answer)
     }
 }
@@ -54,19 +54,19 @@ score ([20, 30, 40, 50], 50);
 // 과목이 여러개여도 상관없는 코드
 function AverageScore (myscore, average) {
     // myscore을 다 더한 값 나누기 myscore의 길이
-    var PlusScore= 0;
+    let PlusScore= 0;
     for (let i = 0; i < myscore.length; i++) {
         PlusScore = PlusScore + myscore[i];
     }
     const myAverageScore = PlusScore / myscore.length ;
     // 그걸 average와 비교해서 결과 알려주기 
     if (myAverageScore - average > 0) {
-        var score = myAverageScore - average
+        const score = myAverageScore - average
         console.log('평균보다 '+score+'점이 올랐네요!');
     } else if (myAverageScore - average === 0) {
         console.log('평균과 동일하네요!')
     } else {
-        var minusScore = average - myAverageScore
+        const minusScore = average - myAverageScore
         console.log('평균보다 '+ minusScore + '점이 떨어졌네요 재수추천');
     }
 }

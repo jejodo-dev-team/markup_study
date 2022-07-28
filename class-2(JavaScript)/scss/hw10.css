@@ -182,9 +182,8 @@
   margin: 32px auto;
 }
 
-.card .card button {
-  display: block;
-  margin: 32px auto;
+.card button {
+  margin-top: 20px;
 }
 
 .result-message {
@@ -205,6 +204,6 @@
 .ms-show {
   visibility: visible;
   height: 40px;
-  margin: 40px auto 12px;
+  margin: 40px auto 20px;
 }
 /*# sourceMappingURL=hw10.css.map */
