@@ -1,0 +1,40 @@
+@import '_all.scss';
+
+.card {
+    @include containerDefaultLayout(40px, block);
+    background-color:$white;
+    padding: 24px;
+    box-shadow: $shadow;
+    border-radius: 10px;
+    input {
+        width: 90%;
+        padding: 12px 20px 10px;
+        border-radius: 20px;
+        border: 1px solid $gray4;
+        margin: auto;
+        display: block;
+    }
+    .card-title {
+        text-align: center;
+        margin: 32px auto;
+    }
+    button {
+        margin-top: 20px;
+    }
+}
+
+.result-message {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    visibility: hidden;
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.4s;
+}
+.correct {color: $blue;}
+.ms-show {
+    visibility: visible;
+    height:40px;
+    margin: 40px auto 20px;
+}

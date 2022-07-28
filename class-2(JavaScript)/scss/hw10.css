@@ -1,0 +1,209 @@
+* {
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: url("../img/main/favicon.png") 20 30, auto;
+}
+
+.homework-main-title {
+  text-align: center;
+  padding-top: 80px;
+}
+
+.homework-main-title h4 {
+  margin-top: 20px;
+  -webkit-animation-name: title-description;
+          animation-name: title-description;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+}
+
+@-webkit-keyframes title-description {
+  0% {
+    -webkit-transform: translateX(4000px);
+            transform: translateX(4000px);
+  }
+  80% {
+    -webkit-transform: translateX(-10px) skew(-20deg);
+            transform: translateX(-10px) skew(-20deg);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes title-description {
+  0% {
+    -webkit-transform: translateX(4000px);
+            transform: translateX(4000px);
+  }
+  80% {
+    -webkit-transform: translateX(-10px) skew(-20deg);
+            transform: translateX(-10px) skew(-20deg);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+.memo-container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 700px;
+  padding: 20px 32px 40px 32px;
+  margin: 32px auto 100px;
+  border-radius: 10px;
+}
+
+.memo-container h5 {
+  color: #4498F2;
+  margin-bottom: 8px;
+}
+
+.memo-container h3 {
+  color: #000;
+}
+
+.memo-container .memo-date {
+  font-size: 12px;
+  color: #999;
+  margin-left: 8px;
+  font-weight: 400;
+}
+
+.memo-container .memo-text {
+  margin-top: 16px;
+  line-height: 24px;
+  color: #000;
+}
+
+.memo-line {
+  width: 90%;
+  max-width: 700px;
+  margin: 60px auto 0px;
+  opacity: 50%;
+}
+
+.main-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #fff;
+  color: #000;
+  font-weight: 700;
+  font-size: 16px;
+  border: 1px solid #000;
+  border-radius: 30px;
+  padding: 16px 20px 16px 20px;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+
+.main-btn:hover {
+  background-color: #000;
+  color: #fff;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.main-btn:active {
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+
+.Main-btn {
+  margin: auto;
+  display: block;
+  padding: 12px 44px;
+  border-radius: 25px;
+  border: 1px solid;
+}
+
+.m-btn {
+  padding: 6px 24px;
+  border: 1px solid #000;
+  border-radius: 20px;
+}
+
+.white-btn {
+  background-color: #fff;
+  color: #000;
+  font-weight: 500;
+}
+
+.white-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.black-btn {
+  background-color: #000;
+  color: #fff;
+  font-weight: 500;
+}
+
+.black-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.card {
+  width: 90%;
+  max-width: 700px;
+  margin: 40px auto;
+  display: block;
+  background-color: #fff;
+  padding: 24px;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.card input {
+  width: 90%;
+  padding: 12px 20px 10px;
+  border-radius: 20px;
+  border: 1px solid #333;
+  margin: auto;
+  display: block;
+}
+
+.card .card-title {
+  text-align: center;
+  margin: 32px auto;
+}
+
+.card button {
+  margin-top: 20px;
+}
+
+.result-message {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  visibility: hidden;
+  height: 0px;
+  overflow: hidden;
+  -webkit-transition: height 0.4s;
+  transition: height 0.4s;
+}
+
+.correct {
+  color: #3AB4F2;
+}
+
+.ms-show {
+  visibility: visible;
+  height: 40px;
+  margin: 40px auto 20px;
+}
+/*# sourceMappingURL=hw10.css.map */
