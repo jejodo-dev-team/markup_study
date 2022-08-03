@@ -13,7 +13,7 @@ $.get('https://codingapple1.github.io/price.json')
 //서버와 유저는 문자로만 주고받을 수 있음 
 //object, array 보내고 싶으면 따옴표쳐서 문자처럼 만들어야함 그게 json 형식
 fetch('https://codingapple1.github.io/price.json')
-    .then(res => res.json()) //받아온 Json을 object로 변환하는 것 
+    .then(res => res.json()) //받아온 object를 Json으로 변환하는 것 
     .then(data => {
         console.log(data)
     })
@@ -29,40 +29,30 @@ const products = [
 ];
     
 //카드 레이아웃 생성하기 
-products.forEach((a, i)=>{
-    const cardTemplate = 
-    `<li class="card">
-        <div class="card-img">
-            <img src="${products[i].img}">
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">${products[i].title}</h5>
-            <p>가격 : <span class="card-price">${products[i].price}</span></p>
-            <button class="m-btn black-btn">주문하기</button>
-        </div>
-    </li>`;
-    $('.card-container').append(cardTemplate)
-})
+function maincardTemplate ($array){
+    $array.forEach((a, i)=>{
+        const cardTemplate = 
+        `<li class="card">
+            <div class="card-img">
+                <img src="${a.img}">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">${a.title}</h5>
+                <p>가격 : <span class="card-price">${a.price}</span></p>
+                <button class="m-btn black-btn">주문하기</button>
+            </div>
+        </li>`;
+        $('.card-container').append(cardTemplate)
+    })  
+}
+
 //낮은가격순
 $('.lowPrice-btn').click(function () {
     products.sort(function(a,b) {
         return a.price-b.price
     });
     $('.card-container').html('');
-    products.forEach((a, i)=>{
-        const cardTemplate = 
-        `<li class="card">
-            <div class="card-img">
-                <img src="${products[i].img}">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">${products[i].title}</h5>
-                <p>가격 : <span class="card-price">${products[i].price}</span></p>
-                <button class="m-btn black-btn">주문하기</button>
-            </div>
-        </li>`;
-        $('.card-container').append(cardTemplate)
-    })
+    maincardTemplate (products);
 })
 //높은 가격순
 $('.highPrice-btn').click(function () {
@@ -70,20 +60,7 @@ $('.highPrice-btn').click(function () {
         return b.price-a.price
     });
     $('.card-container').html('');
-    products.forEach((a, i)=>{
-        const cardTemplate = 
-        `<li class="card">
-            <div class="card-img">
-                <img src="${products[i].img}">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">${products[i].title}</h5>
-                <p>가격 : <span class="card-price">${products[i].price}</span></p>
-                <button class="m-btn black-btn">주문하기</button>
-            </div>
-        </li>`;
-        $('.card-container').append(cardTemplate)
-    })
+    maincardTemplate (products);
 })
 //가나다순
 $('.letterSort-btn').click(function () {
@@ -93,60 +70,23 @@ $('.letterSort-btn').click(function () {
         else return 0;
     });
     $('.card-container').html('');
-    products.forEach((a, i)=>{
-        const cardTemplate = 
-        `<li class="card">
-            <div class="card-img">
-                <img src="${products[i].img}">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">${products[i].title}</h5>
-                <p>가격 : <span class="card-price">${products[i].price}</span></p>
-                <button class="m-btn black-btn">주문하기</button>
-            </div>
-        </li>`;
-        $('.card-container').append(cardTemplate)
+    maincardTemplate (products);
     })
-})
 //6만원 이하
+const priceFilter6 = 60000;
 $('.priceFillter6-btn').click(function () {
-    var produtsFilter= products.filter(function(a){
-        return a.price < 60000
+    const productsFilter= products.filter(function(a){
+        return a.price < priceFilter6
     });
     $('.card-container').html('');
-    produtsFilter.forEach((a, i)=>{
-        const cardTemplate = 
-        `<li class="card">
-            <div class="card-img">
-                <img src="${produtsFilter[i].img}">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">${produtsFilter[i].title}</h5>
-                <p>가격 : <span class="card-price">${produtsFilter[i].price}</span></p>
-                <button class="m-btn black-btn">주문하기</button>
-            </div>
-        </li>`;
-        $('.card-container').append(cardTemplate)
-    })
+    maincardTemplate (productsFilter);
+
 })
 //더보기 
 $('.more-card-btn').click(function () {
     $.get('https://codingapple1.github.io/js/more1.json')
         .done(function(data) {
-            products.forEach((a, i)=>{
-                const cardTemplate = 
-                `<li class="card">
-                    <div class="card-img">
-                        <img src="#">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">${data[i].title}</h5>
-                        <p>가격 : <span class="card-price">${data[i].price}</span></p>
-                        <button class="m-btn black-btn">주문하기</button>
-                    </div>
-                </li>`;
-                $('.card-container').append(cardTemplate)
-            })
+        maincardTemplate (products);
         })
     $('.more-card-btn').css('display','none')
 })
