@@ -29,23 +29,24 @@ const products = [
 ];
     
 //카드 레이아웃 생성하기 
-function maincardTemplate ($array){
-    $array.forEach((a, i)=>{
+function maincardTemplate ($ArrayName){
+    $ArrayName.forEach((Array, i)=>{
         const cardTemplate = 
         `<li class="card">
             <div class="card-img">
-                <img src="${a.img}">
+                <img src="${Array.img}">
             </div>
             <div class="card-body">
-                <h5 class="card-title">${a.title}</h5>
-                <p>가격 : <span class="card-price">${a.price}</span></p>
+                <h5 class="card-title">${Array.title}</h5>
+                <p>가격 : <span class="card-price">${Array.price}</span></p>
                 <button class="m-btn black-btn">주문하기</button>
             </div>
         </li>`;
         $('.card-container').append(cardTemplate)
     })  
 }
-
+//처음 들어왔을 때 템플릿
+maincardTemplate (products);
 //낮은가격순
 $('.lowPrice-btn').click(function () {
     products.sort(function(a,b) {
@@ -80,7 +81,6 @@ $('.priceFillter6-btn').click(function () {
     });
     $('.card-container').html('');
     maincardTemplate (productsFilter);
-
 })
 //더보기 
 $('.more-card-btn').click(function () {
