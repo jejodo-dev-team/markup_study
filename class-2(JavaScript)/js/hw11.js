@@ -30,15 +30,15 @@ const products = [
     
 //카드 레이아웃 생성하기 
 function maincardTemplate ($ArrayName){
-    $ArrayName.forEach((Array, i)=>{
+    $ArrayName.forEach((ArrayItem, i)=>{
         const cardTemplate = 
         `<li class="card">
             <div class="card-img">
-                <img src="${Array.img}">
+                <img src="${ArrayItem.img}">
             </div>
             <div class="card-body">
-                <h5 class="card-title">${Array.title}</h5>
-                <p>가격 : <span class="card-price">${Array.price}</span></p>
+                <h5 class="card-title">${ArrayItem.title}</h5>
+                <p>가격 : <span class="card-price">${ArrayItem.price}</span></p>
                 <button class="m-btn black-btn">주문하기</button>
             </div>
         </li>`;
