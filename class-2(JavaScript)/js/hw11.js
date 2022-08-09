@@ -30,7 +30,7 @@ const products = [
     
 //카드 레이아웃 생성하기 
 function maincardTemplate ($ArrayName){
-    $ArrayName.forEach((ArrayItem, i)=>{
+    $ArrayName.forEach((ArrayItem)=>{
         const cardTemplate = 
         `<li class="card">
             <div class="card-img">
