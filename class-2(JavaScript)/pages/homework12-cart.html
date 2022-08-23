@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니 </title>
+    <link href="../scss/hw11.css" rel="stylesheet">
+    <style>
+    .cart-container {
+        width: 90%;
+        max-width: 700px;
+        margin: 80px auto;
+        text-align: center;
+    }
+    .cart-num {
+        margin-top: 16px;
+    }
+    .cart {
+        width: 400px;
+        margin: 20px auto;
+        background-color: #eee;
+        padding: 24px;
+        border-radius: 10px;
+    }
+    .cart ul {
+        list-style: none;
+        line-height: 24px;
+        padding: 0px;
+    }
+    </style>
+</head>
+<body>
+    <div class="cart-container">
+        <h1>🧺 장바구니 🧺</h1>
+        <h3 class="cart-num">선택한 수량</h3>
+        <h5 class="cart">상품명</h5>
+        <a href="homework12.html"><button class="Main-btn black-btn">뒤로가기</button></a>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+    <script>
+        
+        const numList = JSON.parse(localStorage.num);
+
+        let cartResult = 0;
+        for (let i=0; i<numList.length; i++) {
+            const num1 = numList[i].num;
+
+            cartResult += num1;
+        }
+        $('.cart-num').html('');
+        $('.cart-num').append('담은 상품수: ', cartResult);
+        $('.cart').html('');
+        console.log(numList);
+        numList.sort(function(a, b) {
+            if (a.title > b.title) return 1;
+            else if (b.title > a.title) return -1;
+            else return 0;
+        })
+        numList.forEach((a, i)=>{
+            const cartTemplate = `
+            <ul>
+                <li>${numList[i].title} |  ${numList[i].num}개 </li>
+            </ul>`
+            $('.cart').append(cartTemplate);
+        });
+
+    </script>
+</body>
+</html>
